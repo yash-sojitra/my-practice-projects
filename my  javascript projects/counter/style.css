@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.counter{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color:rgb(196, 196, 196);
+}
+
+.counter p{
+    font-size:250px;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.buttons{
+    display: flex;
+    justify-content:space-around;
+}
+
+.buttons button{
+    border: none;
+    color: white;
+    background-color:black;
+    margin: 10px;
+    height: 70px;
+    width: 200px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.buttons button:hover{
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+}

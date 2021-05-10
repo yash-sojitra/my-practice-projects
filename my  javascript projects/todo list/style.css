@@ -1,0 +1,116 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background: linear-gradient(to bottom right , rgb(255, 238, 1), rgb(219, 108, 3));
+}
+
+.main{
+    margin: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 60px;
+    align-items: center;
+    font-family: Comfortaa;
+}
+
+.main div{
+    margin-top: 40px;
+     display: flex;
+     /* justify-content: center; */
+     align-items: center;
+}
+
+#input{
+    margin-right: 40px;
+    height: 45px;
+    width: 700px;
+    border: none;
+    background-color: rgb(238, 238, 238);
+    font-size: 24px;
+}
+
+.add{
+    height: 45px;
+    width: 45px;
+    border: none;
+    font-size: 24px;
+    background-color: rgb(238, 238, 238);
+    color: rgb(255, 124, 1);
+    cursor: pointer;
+}
+
+.add:hover{
+    color: rgb(238, 238, 238);
+    background-color: rgb(230, 196, 4);
+}
+
+.drpbox{
+    border: none;
+    margin-left: 40px;
+    height: 45px;
+    font-size: 20px;
+    color: rgb(255, 124, 1);
+}
+
+.todo-ul{
+    list-style: none;
+    margin: 25px;
+}
+
+#todo-li{
+    margin: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 45px;
+    width: 795px;
+    background-color: rgb(238, 238, 238);
+    flex: 1;
+}
+
+#todo-text{
+    margin-left: 10px;
+    font-size: 28px;
+}
+
+#checkbtn, #trashbtn{
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
+    font-size: 12px;
+    background-color: rgb(6, 180, 6);
+    border: none;
+    color: rgb(238, 238, 238);
+}
+
+#trashbtn{
+    margin: 0px;
+    background-color: rgb(219, 7, 7);
+}
+
+#btn-div{
+    margin: 0px;
+    display: flex;
+    justify-content: right;
+}
+
+.fa-trash, .fa-check{
+    pointer-events: none;
+}
+
+.completed{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall{
+    transform: translateY(41rem) rotateZ(70deg);
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}

@@ -1,0 +1,166 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.game{
+    height: 100vh;
+    background: linear-gradient(135deg, rgb(41, 235, 202), rgb(109, 15, 185));
+}
+
+.scorecard{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size:20px;
+}
+
+.scorecard div{
+    margin: 5px;
+    padding: 40px;
+    border-radius:10px;
+    color: rgb(63, 14, 63);
+    font-family: 'Comfortaa', cursive;
+}
+
+.scorecard div p{
+    padding: 15px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 40vh;
+    font-size: 60px;
+    margin: 40px;
+    font-family: 'Comfortaa', cursive;
+    transition: opacity 0.5s ease;
+}
+
+.intro button,
+.match button{
+    font-family: 'Comfortaa', cursive;
+    height: 55px;
+    width: 170px;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.651);
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.intro button, .match button:hover{
+    background-color: rgba(255, 255, 255, 0.815);
+}
+
+.match{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vh;
+    transition: opacity 0.5s ease 0.5s;
+}
+
+.winner{
+    font-family: 'Comfortaa', cursive;
+    font-size: 50px;
+    text-align: center;
+}
+
+.hands, .options{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+}
+
+.player-hand{
+    transform: rotateY(180deg);
+}
+
+div.fadeOut{
+    opacity: 0;
+    pointer-events: none;
+}
+
+div.fadeIn{
+    opacity: 1;
+    pointer-events: all;
+}
+
+@keyframes shakeplayer {
+    0%{
+        transform: rotateY(180deg) translateY(0px);
+    }
+    10%{
+        transform: rotateY(180deg) translateY(-50px);  
+    }
+    20%{
+        transform: rotateY(180deg) translateY(0px);
+    }
+    30%{
+        transform: rotateY(180deg) translateY(-50px);
+    }
+    40%{
+        transform: rotateY(180deg) translateY(0px);
+    }
+    50%{
+        transform: rotateY(180deg) translateY(-50px);
+    }
+    60%{
+        transform: rotateY(180deg) translateY(0px);
+    }
+    70%{
+        transform: rotateY(180deg) translateY(-50px);
+    }
+    80%{
+        transform: rotateY(180deg) translateY(0px);
+    }
+    90%{
+        transform: rotateY(180deg) translateY(-50px);
+    }
+    100%{
+        transform: rotateY(180deg) translateY(0px);
+    }
+}
+
+@keyframes shakecomputer {
+    0%{
+        transform: translateY(0px);
+    }
+    10%{
+        transform: translateY(-50px);  
+    }
+    20%{
+        transform: translateY(0px);
+    }
+    30%{
+        transform: translateY(-50px);
+    }
+    40%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-50px);
+    }
+    60%{
+        transform: translateY(0px);
+    }
+    70%{
+        transform: translateY(-50px);
+    }
+    80%{
+        transform: translateY(0px);
+    }
+    90%{
+        transform: translateY(-50px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}

@@ -1,0 +1,70 @@
+*{
+    font-family: 'Hind Madurai', sans-serif;
+}
+
+body{
+    background:url(background.jpg)no-repeat top center/cover;
+    height: 100%;
+    justify-content: center; 
+}
+
+/* navbar strip */
+.container{
+    display:flex;
+    position: sticky;
+}
+
+.navbar {
+    display: flex;  
+    color: white;
+    list-style-type: none;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 0px;
+    padding: 0px 0px;
+}
+
+/* navbar elements */
+#logo{
+    height: 37px;
+    /* border: 2px solid red; */
+    border-radius: 10px;
+    margin: 6px;
+    margin-right: 45px;
+    filter: invert(100%);
+    cursor: pointer;
+}
+
+.navbar li {
+    padding: 3px 10px;
+    margin: 11px;
+    border: 2px solid white;
+    border-radius: 25px; 
+    color:white;
+    text-decoration: none;
+}
+
+.navbar li a{
+    text-decoration: none;
+    color:white;
+}
+
+.navbar  :hover {
+    color: black;
+    background-color: white;
+}
+
+/* home page */
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home h1{
+    color: rgb(202, 202, 202);
+    margin-top: 180px;
+    font-size: 65px;
+}
