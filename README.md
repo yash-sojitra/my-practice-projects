@@ -1,2 +1,3 @@
-# my-practice-projects
-# my-practice-projects
+this are my practice projects 
+
+i am learning web devlopment. and this is my progress.
