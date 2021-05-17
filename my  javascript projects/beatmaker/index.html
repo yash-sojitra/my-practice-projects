@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Beatmaker</title>
+</head>
+<body>
+    <section class="sequencer">
+        <div class="kick">
+            <div class="controls">
+                <h2>Kick</h2>
+                <button><img src="./mute.svg"></button>
+                <select name="kick-select" id="kick-options">
+                    <option value="./sounds/kick-classic.wav">kick-classic</option>
+                    <option value="./sounds/kick-electro01.wav">kick-electro</option>
+                    <option value="./sounds/kick-tron.wav">kick-tron</option>
+                </select>
+            </div>
+            <div class="kick-pads">
+                <div class="pads kick-pad b0"></div>
+                <div class="pads kick-pad b1"></div>
+                <div class="pads kick-pad b2"></div>
+                <div class="pads kick-pad b3"></div>
+                <div class="pads kick-pad b4"></div>
+                <div class="pads kick-pad b5"></div>
+                <div class="pads kick-pad b6"></div>
+                <div class="pads kick-pad b7"></div>
+            </div>
+        </div>
+        <div class="snare">
+            <div class="controls">
+                <h2>snare</h2>
+                <button><img src="./mute.svg"></button>
+                <select name="snare-select" id="snare-options">
+                    <option value="./sounds/snare-acoustic01.wav">snare-acoustic01</option>
+                    <option value="./sounds/snare-acoustic02.wav">snare-acoustic02</option>
+                    <option value="./sounds/snare-brute.wav">snare-brute</option>
+                </select>
+            </div>
+            <div class="snare-pads">
+                <div class="pads snare-pad b0"></div>
+                <div class="pads snare-pad b1"></div>
+                <div class="pads snare-pad b2"></div>
+                <div class="pads snare-pad b3"></div>
+                <div class="pads snare-pad b4"></div>
+                <div class="pads snare-pad b5"></div>
+                <div class="pads snare-pad b6"></div>
+                <div class="pads snare-pad b7"></div>
+            </div>
+        </div>
+        <div class="tom">
+            <div class="controls">
+                <h2>Tom</h2>
+                <button><img src="./mute.svg"></button>
+                <select name="tom-options" id="tom-options">
+                    <option value="./sounds/tom-analog.wav">tom-analog</option>
+                    <option value="./sounds/tom-chiptune.wav">tom-chiptune</option>
+                    <option value="./sounds/tom-rototom.wav">tom-rototom</option>
+                </select>
+            </div>
+            <div class="tom-pads">
+                <div class="pads tom-pad b0"></div>
+                <div class="pads tom-pad b1"></div>
+                <div class="pads tom-pad b2"></div>
+                <div class="pads tom-pad b3"></div>
+                <div class="pads tom-pad b4"></div>
+                <div class="pads tom-pad b5"></div>
+                <div class="pads tom-pad b6"></div>
+                <div class="pads tom-pad b7"></div>
+            </div>
+        </div>
+        <button class="play">play</button>
+    </section>
+    
+</body>
+</html>

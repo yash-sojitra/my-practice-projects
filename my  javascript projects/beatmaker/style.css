@@ -1,0 +1,68 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.controls{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.pads{
+    height: 5rem;
+    width: 5rem;
+    margin: 1rem;
+}
+.kick,
+.snare,
+.tom{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;   
+    width: 100vw; 
+}
+.kick-pads,
+.snare-pads,
+.tom-pads{
+    display: flex;
+}
+
+.controls button{
+    margin: 0rem 10rem;
+    padding: 0.6rem;
+    filter: invert();
+    border-radius: 5px;
+}
+
+select{
+    padding: 1rem;
+}
+
+.sequencer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 70vh;
+}
+
+.kick-pad{
+    background-color: rgb(197, 255, 255);
+}
+.snare-pad{
+    background-color: rgb(206, 197, 255);
+}
+.tom-pad{
+    background-color: rgb(255, 203, 172);
+}
+
+.play{
+    padding: 1rem 1.5rem;
+    border: none;
+    color: white;
+    background-color: rgb(29, 29, 29);
+    cursor: pointer;
+}

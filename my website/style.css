@@ -81,20 +81,17 @@
 }
 
 .img{
-    width: 100vw;
+    width: 50vw;
     height: auto;
     box-shadow: 0px 0px 0px 10px grey;
 }
 
-.img3{
-    width: 55vw;
-}
-.image2, .image1, .image3{
+.image1, .image2, .image3{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2rem 4rem;
+    padding: 7vw 5rem;
 }
 
 .image2{
@@ -103,7 +100,7 @@
 
 .text{
     padding: 15vw 0vw 12vw 0vw;
-    text-align: right;
+    text-align: center;
 }
 .text h2{
     padding: 0vw 0vw 2vw 0vw;
@@ -119,17 +116,17 @@
     letter-spacing: 2px;
 }
 
-/* .box{
+.box{
     box-shadow: 0px -2px 0px 30px grey;
     border-radius: 2px;
-} */
+}
 
 .carousel{
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 70vh;
+    height: 80vh;
     width: 100vw;
     background:linear-gradient(to bottom, rgba(144, 144, 144, 1),rgba(21, 21, 21, 1)) ;
 }
@@ -163,12 +160,22 @@
     .image1,.image2 , .image3{
         flex-direction: row;
     }
-    .img1{
-        height:13.33333333vw ;
-        width: 20vw;
+    .img{
+        width: 40vw;
+        height:auto;
+    }
+
+    .img3{
+        width: 30vw;
+    }
+
+    .text{
+        width: 50vw;
+        padding: 5vw;
     }
 
     .text h2{
+
         font-size: 2.5vw;
         margin: 0px;
     }
