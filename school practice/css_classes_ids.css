@@ -1,0 +1,17 @@
+h1{
+    color: blue;    
+    text-align: center;
+    background-color: red;
+    text-transform: uppercase;
+    border: dashed;
+    font-size: 20pt;
+}
+
+.abc{
+    color: green;    
+    text-align: right;
+    background-color: black;
+    text-transform: lowercase;
+    border: dotted;
+    font-size: 25pt;
+}
