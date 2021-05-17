@@ -10,7 +10,6 @@
 }
 
 .color{
-    background-color: burlywood;
     height: 80vh;
     flex: 1;
     display: flex;
@@ -21,7 +20,7 @@
 
 .color h2{
     font: 3rem;
-    margin: 2rem 1rem;
+    margin-top: 4rem;
 }
 
 .buttons{
@@ -32,7 +31,7 @@
 
 .buttons button{
     margin: 1rem 1rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
     background: none;
     border: none;
 }
@@ -105,11 +104,9 @@ button{
 
 .sliders input{
     -webkit-appearance: none;
-    background: black;
     border-radius: 1rem;
-    height: 1.5rem;
-    width: 100%;
-    padding: 0.5rem;
+    height: 1rem;
+    width: 100%;        
 }
 
 .hue-input{
