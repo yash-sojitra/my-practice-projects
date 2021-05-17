@@ -1,0 +1,117 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Monda', sans-serif;
+}
+
+.colors{
+    display: flex;
+}
+
+.color{
+    background-color: burlywood;
+    height: 80vh;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.color h2{
+    font: 3rem;
+    margin: 2rem 1rem;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    margin: 6rem 1rem;
+}
+
+.buttons button{
+    margin: 1rem 1rem;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+}
+
+footer{
+    height: 20vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer div button{
+    font-size: 1.5rem;
+    padding:1rem 1.5rem;
+    color: white;
+    background: rgb(0, 7, 44);
+    border-radius: 0.3rem;
+    border: none;
+}
+
+button{
+    cursor: pointer;
+}
+
+.fas{
+    pointer-events: none;
+}
+
+.library-container{
+    display: none;
+}
+
+.save-container{
+    display: none;
+}
+
+
+.sliders{
+    width: 90%;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    /* transform: translateY(300px); */
+    /* display: none; */
+    transition: all 0.4s ease-in-out;
+    
+}
+
+.sliders button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: rgb(0, 7, 44);
+    color: rgb(216, 216, 216);
+    border: none;
+    padding: 0.3rem;
+    border-radius: 0 0.4rem 0 0;
+}
+
+.sliders p{
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+
+.sliders input{
+    -webkit-appearance: none;
+    background: black;
+    border-radius: 1rem;
+    height: 1.5rem;
+    width: 100%;
+    padding: 0.5rem;
+}
+
+.hue-input{
+    margin-top: 1.5rem;
+}
