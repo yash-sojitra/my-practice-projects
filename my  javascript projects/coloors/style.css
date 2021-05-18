@@ -80,8 +80,8 @@ button{
     align-items: center;
     padding: 1rem;
     border-radius: 0.4rem;
-    /* transform: translateY(300px); */
-    /* display: none; */
+    /* transform: translateY(300px); 
+    display: none;  */
     transition: all 0.4s ease-in-out;
     
 }
@@ -111,4 +111,35 @@ button{
 
 .hue-input{
     margin-top: 1.5rem;
+}
+
+.copy-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+}
+.copy-popup{
+    font-size: 1.5rem;
+    background-color: white;
+    padding: 6rem;
+    border-radius: 0.6rem;
+    transform: translateY(30px);
+    transition: transform 0.4s ease-in-out;
+}
+
+.copy-container.active{
+    opacity: 1;
+    pointer-events: all;
+
+}
+.copy-popup.active{
+    transform: translateY(0px);
 }
