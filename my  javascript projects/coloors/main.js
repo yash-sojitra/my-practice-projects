@@ -5,8 +5,8 @@ const color = document.querySelectorAll(".color");
 const currentHex = document.querySelectorAll(".color h2");
 const generatebtn = document.querySelector(".generate button");
 const sliders = document.querySelectorAll("input[type=range]");
-const copyContainer = document.querySelectorAll(".copy-container");
-const copyPopup = document.querySelectorAll(".copy-popup");
+const copyContainer = document.querySelector(".copy-container");
+const copyPopup = document.querySelector(".copy-popup");
 
 let initialcolors;
 //functions
@@ -137,8 +137,8 @@ function copyToClipboard(hex) {
   document.body.removeChild(textarea);
 
   //pop up animation
-  const popup = copyContainer.children[0]
-  copyContainer
+  copyContainer.classList.add('active')
+  copyPopup.classList.add('active')
 }
 
 //event listners
@@ -157,4 +157,9 @@ currentHex.forEach((hex) => {
   });
 });
 
+copyPopup.addEventListener('transitionend', ()=>{
+  copyContainer.classList.remove('active')
+  copyPopup.classList.remove('active')
+  
+})
 randomColors();
