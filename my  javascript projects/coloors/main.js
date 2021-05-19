@@ -4,9 +4,12 @@ const colors = document.querySelectorAll(".colors");
 const color = document.querySelectorAll(".color");
 const currentHex = document.querySelectorAll(".color h2");
 const generatebtn = document.querySelector(".generate button");
+const slidersDiv = document.querySelectorAll(".sliders");
 const sliders = document.querySelectorAll("input[type=range]");
 const copyContainer = document.querySelector(".copy-container");
 const copyPopup = document.querySelector(".copy-popup");
+const lockBtn = document.querySelectorAll(".lock");
+const lockicon = document.querySelectorAll(".lock i");
 
 let initialcolors;
 //functions
@@ -18,9 +21,16 @@ const generateHex = () => {
 
 function randomColors() {
   initialcolors = [];
-  color.forEach(function (div) {
+  color.forEach(function (div, index) {
     const hextext = div.children[0];
     const randomcolor = generateHex();
+    console.log(hextext.innerText);
+    if (div.classList.contains("locked")) {
+      initialcolors.push(hextext.innerText);
+      return;
+    } else {
+      initialcolors.push(chroma(randomcolor).hex());
+    }
 
     initialcolors.push(chroma(randomcolor).hex());
 
@@ -84,9 +94,9 @@ const hslControls = (e) => {
     e.target.getAttribute("data-bright") ||
     e.target.getAttribute("data-sat");
   const icons = color[index].querySelectorAll(".buttons button");
-  const hue = e.target.parentElement.children[1];
-  const brightness = e.target.parentElement.children[3];
-  const saturation = e.target.parentElement.children[5];
+  const hue = e.target.parentElement.children[0];
+  const brightness = e.target.parentElement.children[2];
+  const saturation = e.target.parentElement.children[4];
   const bgcolor = initialcolors[index];
 
   let hextext = color[index].children[0];
@@ -137,8 +147,8 @@ function copyToClipboard(hex) {
   document.body.removeChild(textarea);
 
   //pop up animation
-  copyContainer.classList.add('active')
-  copyPopup.classList.add('active')
+  copyContainer.classList.add("active");
+  copyPopup.classList.add("active");
 }
 
 //event listners
@@ -157,9 +167,27 @@ currentHex.forEach((hex) => {
   });
 });
 
-copyPopup.addEventListener('transitionend', ()=>{
-  copyContainer.classList.remove('active')
-  copyPopup.classList.remove('active')
-  
-})
+copyPopup.addEventListener("transitionend", () => {
+  copyContainer.classList.remove("active");
+  copyPopup.classList.remove("active");
+});
+
+color.forEach((color, index) => {
+  const slider = color.children[1].children[0];
+
+  slider.addEventListener("click", () => {
+    slidersDiv[index].classList.toggle("active");
+  });
+});
+
+color.forEach((color, index) => {
+  lockBtn[index].addEventListener("click", () => {
+    const lockIcon = lockBtn[index].children[0];
+    lockIcon.classList.toggle("fa-lock-open");
+    lockIcon.classList.toggle("fa-lock");
+    color.classList.toggle('locked')
+    console.log(color)
+  });
+});
+
 randomColors();

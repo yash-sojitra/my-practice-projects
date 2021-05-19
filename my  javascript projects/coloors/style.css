@@ -69,6 +69,9 @@ button{
     display: none;
 }
 
+.fas{
+    pointer-events: none;
+}
 
 .sliders{
     width: 90%;
@@ -80,21 +83,16 @@ button{
     align-items: center;
     padding: 1rem;
     border-radius: 0.4rem;
-    /* transform: translateY(300px); 
-    display: none;  */
-    transition: all 0.4s ease-in-out;
-    
+    transform: translateY(70px); 
+    opacity: 0;
+    transition: all 0.3s ease-in-out; 
+    pointer-events: none;
 }
 
-.sliders button{
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: rgb(0, 7, 44);
-    color: rgb(216, 216, 216);
-    border: none;
-    padding: 0.3rem;
-    border-radius: 0 0.4rem 0 0;
+.sliders.active{
+    transform: translateY(0px); 
+    opacity: 1;
+    pointer-events: all;
 }
 
 .sliders p{
@@ -110,7 +108,7 @@ button{
 }
 
 .hue-input{
-    margin-top: 1.5rem;
+    margin-top: 0.5rem;
 }
 
 .copy-container{
@@ -129,6 +127,7 @@ button{
 }
 .copy-popup{
     font-size: 1.5rem;
+    letter-spacing: 3px;
     background-color: white;
     padding: 6rem;
     border-radius: 0.6rem;
@@ -142,5 +141,63 @@ button{
 
 }
 .copy-popup.active{
+    transform: translateY(0px);
+}
+
+.save-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease-in-out;
+}
+.save-modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    letter-spacing: 3px;
+    background-color: white;
+    padding: 6rem 7rem 4rem 7rem;
+    border-radius: 0.6rem;
+    transform: translateY(30px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease-in-out;
+}
+
+.save-modal input{
+    height: 4rem;
+    width: 25rem;
+    font-size: 2rem;
+}
+
+.save-btn{
+    padding: 0.5rem 1rem;
+    margin-top: 2.5rem;
+}
+
+.close-save{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+
+}
+
+.save-container.active{
+    opacity: 1;
+    pointer-events: all;
+
+}
+.save-modal.active{
     transform: translateY(0px);
 }
