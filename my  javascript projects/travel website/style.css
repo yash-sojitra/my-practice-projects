@@ -1,0 +1,162 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #17181a;
+    font-family: Montserrat;
+}
+
+header{
+    width: 80%;
+    min-height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding: 2rem 0rem;
+}
+
+.logo{
+    font-family: 'Abril Fatface',sans-serif;
+    text-decoration: underline;
+    font-weight: 600;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.line1, .line2{
+    height: 0.2rem;
+    width: 3rem;
+    background-color: white;
+    margin: 0.4rem;
+}
+
+.burger{
+    cursor: pointer;
+}
+
+section{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    min-height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.textarea{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    flex-basis: 25rem;
+    padding-left: 5rem;
+    position: relative;
+}
+
+.img{
+    position: relative;
+    flex: 1;
+    flex-basis: 25rem;
+}
+
+.img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.textarea h2{
+    font-family: 'Abril Fatface',sans-serif;
+    font-size: 5rem;
+    color: white;
+}
+
+.forest-span{
+    color: rgb(86, 124, 228);
+}
+.hike-span{
+    color: rgb(167, 110, 231);
+}
+.fashion-span{
+    color:rgb(255, 139, 93);
+}
+
+.textarea p {
+    color: white;
+    font-size: 1.5rem;
+    padding: 3rem 0rem;
+}
+
+.textarea a{
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 1rem 2rem ;
+    text-align: left;
+    align-self: flex-start;
+    cursor: pointer;
+    font: 1rem;
+    cursor: pointer;
+}
+
+.reveal-img, .reveal-txt{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: #17181a; */
+    pointer-events: none;
+}
+
+.nav-bar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    clip-path:circle(50px at 100% -10%);
+    -webkit-clip-path:circle(50px at 100% -10%);
+}
+
+.nav-links{
+    font-size: 3rem;
+    flex-basis: 30rem;
+}
+
+.nav-links div{
+    padding: 3rem 0rem;
+}
+
+.contact{
+    flex-basis: 30rem;
+}
+
+.contact h2{
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 2rem 0rem;
+}
+
+.contact p{
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.cursor{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    border: 1px solid white;
+    position: absolute;
+}

@@ -1,9 +1,9 @@
 How to create a Color Flipper (done)
-How to create a counter       (done)
-How to create a review carousel
+How to create a counter (done)
+How to create a review carousel (done)
 How to create a responsive navbar (done)
-How to create a sidebar
-How to create a modal
+How to create a sidebar (done)
+How to create a modal(done)
 How to create a FAQ page
 How to create a restaurant menu page
 How to create a video background

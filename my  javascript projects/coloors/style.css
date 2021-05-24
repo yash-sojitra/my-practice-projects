@@ -144,7 +144,7 @@ button{
     transform: translateY(0px);
 }
 
-.save-container{
+.save-container, .library-container{
     position: fixed;
     top: 0;
     left: 0;
@@ -158,7 +158,7 @@ button{
     pointer-events: none;
     transition: all 0.4s ease-in-out;
 }
-.save-modal{
+.save-modal, .library-modal{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -173,13 +173,21 @@ button{
     transition: all 0.4s ease-in-out;
 }
 
+.library-modal{
+    min-width: 40%;
+    padding: 1rem;
+    justify-content: flex-start;
+    overflow-y: scroll;
+    max-height: 50vh;
+}
+
 .save-modal input{
     height: 4rem;
     width: 25rem;
     font-size: 2rem;
 }
 
-.save-btn{
+.save-palette-btn{
     padding: 0.5rem 1rem;
     margin-top: 2.5rem;
 }
@@ -193,11 +201,46 @@ button{
 
 }
 
-.save-container.active{
+.close-library{
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 2px 12px;  
+}
+
+.save-container.active, .library-container.active{
     opacity: 1;
     pointer-events: all;
 
 }
-.save-modal.active{
+.save-modal.active, .library-modal.active{
+    opacity: 1;
     transform: translateY(0px);
+    pointer-events: all;
+}
+
+.preview-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 2rem;
+}
+
+.title{
+    font-size: 2rem;
+    flex: 1;
+}
+
+.preview{
+    height: 4.5rem;
+    width: 5rem;
+    display: flex;
+    flex: 1;
+    margin-right: 1rem;
+    border-radius: 1rem;
+}
+.small-div{
+    height: 100%;
+    width: 20%;
 }
