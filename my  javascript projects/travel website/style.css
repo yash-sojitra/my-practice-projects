@@ -7,6 +7,7 @@
 body {
   background-color: #17181a;
   font-family: Montserrat;
+  pointer-events: none;
 }
 
 header {
@@ -18,6 +19,7 @@ header {
   margin: auto;
   padding: 2rem 0rem;
   z-index: 3;
+  pointer-events: all !important;
 }
 
 .logo {
@@ -27,12 +29,10 @@ header {
   font-size: 2rem;
   color: white;
   cursor: pointer;
-  z-index: 6;
 }
 
 .line1,
 .line2 {
-  z-index: 6;
   height: 0.2rem;
   width: 3rem;
   background-color: white;
@@ -42,7 +42,10 @@ header {
 
 .burger {
   cursor: pointer;
-  z-index: 6;
+}
+
+main{
+    pointer-events: none;
 }
 
 section {
@@ -53,6 +56,7 @@ section {
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
+  z-index: -2;
 }
 
 .textarea {
@@ -125,6 +129,7 @@ section {
 }
 
 .nav-bar {
+  z-index: -1;
   position: fixed;
   top: 0;
   left: 0;
@@ -196,5 +201,3 @@ section {
   position: static;
   pointer-events: none;
 }
-
-

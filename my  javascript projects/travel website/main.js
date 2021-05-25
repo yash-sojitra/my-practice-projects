@@ -70,6 +70,7 @@ function animateSLides() {
 const mouse = document.querySelector(".cursor");
 const logo = document.querySelector(".logo");
 const burger = document.querySelector(".burger");
+const navBar = document.querySelector(".nav-bar");
 
 function cursor(e) {
   mouse.style.left = e.pageX + "px";
@@ -83,17 +84,35 @@ function activeCursor(e) {
   } else {
     mouse.classList.remove("nav-active");
   }
-  if(item.classList.contains('exp')){
-    mouse.innerText = 'tap'
-    mouse.classList.add('exp-active')
+  if (item.classList.contains("exp")) {
+    mouse.innerText = "tap";
+    mouse.classList.add("exp-active");
+  } else {
+    mouse.innerText = "";
+    mouse.classList.remove("exp-active");
+  }
+}
+
+function navToggle(e) {
+  if (!navBar.classList.contains("active")) {
+    gsap.to(".line1", { rotate: "45", y: "5", backgroundColor: "black" });
+    gsap.to(".line2", { rotate: "-45", y: "-5", backgroundColor: "black" });
+    gsap.to(".nav-bar", 1, { clipPath: "circle(2500px at 100% -10%" });
+    gsap.to(".logo", 1, { color: "black" });
+    gsap.to('.cursor', {border: '2px solid black'})
+    navBar.classList.add('active')
   }else{
-    mouse.innerText = ''
-    mouse.classList.remove('exp-active')
+    gsap.to(".line1", { rotate: "0", y: "0", backgroundColor: "white" });
+    gsap.to(".line2", { rotate: "0", y: "0", backgroundColor: "white" });
+    gsap.to(".nav-bar", 1, { clipPath: "circle(50px at 100% -10%" });
+    gsap.to(".logo", 1, { color: "white" });
+    gsap.to('.cursor', {border: '2px solid white'})
+    navBar.classList.remove('active')
   }
 }
 
 //Event Listners
-
+burger.addEventListener("click", navToggle);
 window.addEventListener("mouseover", activeCursor);
 window.addEventListener("mousemove", cursor);
 
