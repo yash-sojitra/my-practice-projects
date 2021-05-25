@@ -71,6 +71,7 @@ const mouse = document.querySelector(".cursor");
 const logo = document.querySelector(".logo");
 const burger = document.querySelector(".burger");
 const navBar = document.querySelector(".nav-bar");
+const body = document.querySelector('body')
 
 function cursor(e) {
   mouse.style.left = e.pageX + "px";
@@ -101,6 +102,7 @@ function navToggle(e) {
     gsap.to(".logo", 1, { color: "black" });
     gsap.to('.cursor', {border: '2px solid black'})
     navBar.classList.add('active')
+    body.classList.add('hide')
   }else{
     gsap.to(".line1", { rotate: "0", y: "0", backgroundColor: "white" });
     gsap.to(".line2", { rotate: "0", y: "0", backgroundColor: "white" });
@@ -108,6 +110,7 @@ function navToggle(e) {
     gsap.to(".logo", 1, { color: "white" });
     gsap.to('.cursor', {border: '2px solid white'})
     navBar.classList.remove('active')
+    body.classList.remove('hide')
   }
 }
 
