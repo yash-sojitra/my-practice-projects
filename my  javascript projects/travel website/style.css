@@ -1,165 +1,200 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-body{
-    background-color: #17181a;
-    font-family: Montserrat;
+body {
+  background-color: #17181a;
+  font-family: Montserrat;
 }
 
-header{
-    width: 80%;
-    min-height: 10vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: auto;
-    padding: 2rem 0rem;
+header {
+  width: 80%;
+  min-height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  padding: 2rem 0rem;
+  z-index: 3;
 }
 
-.logo{
-    font-family: 'Abril Fatface',sans-serif;
-    text-decoration: underline;
-    font-weight: 600;
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
+.logo {
+  font-family: "Abril Fatface", sans-serif;
+  text-decoration: underline;
+  font-weight: 600;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  z-index: 6;
 }
 
-.line1, .line2{
-    height: 0.2rem;
-    width: 3rem;
-    background-color: white;
-    margin: 0.4rem;
+.line1,
+.line2 {
+  z-index: 6;
+  height: 0.2rem;
+  width: 3rem;
+  background-color: white;
+  margin: 0.4rem;
+  pointer-events: none;
 }
 
-.burger{
-    cursor: pointer;
+.burger {
+  cursor: pointer;
+  z-index: 6;
 }
 
-section{
-    display: flex;
-    width: 80%;
-    margin: auto;
-    min-height: 100vh;
-    justify-content: space-between;
-    align-items: center;
-    overflow-x: hidden;
+section {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  min-height: 100vh;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
 }
 
-.textarea{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-    flex-basis: 25rem;
-    padding-left: 5rem;
-    position: relative;
+.textarea {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  flex-basis: 25rem;
+  padding-left: 5rem;
+  position: relative;
 }
 
-.img{
-    position: relative;
-    flex: 1;
-    flex-basis: 25rem;
-    overflow: hidden;
+.img {
+  position: relative;
+  flex: 1;
+  flex-basis: 25rem;
+  overflow: hidden;
 }
 
-.img img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+.img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
-.textarea h2{
-    font-family: 'Abril Fatface',sans-serif;
-    font-size: 5rem;
-    color: white;
+.textarea h2 {
+  font-family: "Abril Fatface", sans-serif;
+  font-size: 5rem;
+  color: white;
 }
 
-.forest-span{
-    color: rgb(86, 124, 228);
+.forest-span {
+  color: rgb(109, 187, 218);
 }
-.hike-span{
-    color: rgb(167, 110, 231);
+.hike-span {
+  color: rgb(204, 34, 60);
 }
-.fashion-span{
-    color:rgb(255, 139, 93);
+.fashion-span {
+  color: rgb(255, 139, 93);
 }
 
 .textarea p {
-    color: white;
-    font-size: 1.5rem;
-    padding: 3rem 0rem;
+  color: white;
+  font-size: 1.5rem;
+  padding: 3rem 0rem;
 }
 
-.textarea a{
-    color: white;
-    text-decoration: none;
-    border: 1px solid white;
-    padding: 1rem 2rem ;
-    text-align: left;
-    align-self: flex-start;
-    cursor: pointer;
-    font: 1rem;
-    cursor: pointer;
+.textarea a {
+  color: white;
+  text-decoration: none;
+  border: 1px solid white;
+  padding: 1rem 2rem;
+  text-align: left;
+  align-self: flex-start;
+  cursor: pointer;
+  font: 1rem;
+  pointer-events: all;
 }
 
-.reveal-img, .reveal-txt{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #17181a;
-    pointer-events: none;
+.reveal-img,
+.reveal-txt {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 1000px;
+  background: #17181a;
+  pointer-events: none;
 }
 
-.nav-bar{
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: white;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    clip-path:circle(50px at 100% -10%);
-    -webkit-clip-path:circle(50px at 100% -10%);
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  clip-path: circle(50px at 100% -10%);
+  -webkit-clip-path: circle(50px at 100% -10%);
 }
 
-.nav-links{
-    font-size: 3rem;
-    flex-basis: 30rem;
+.nav-links {
+  font-size: 3rem;
+  flex-basis: 30rem;
 }
 
-.nav-links div{
-    padding: 3rem 0rem;
+.nav-links div {
+  padding: 3rem 0rem;
 }
 
-.contact{
-    flex-basis: 30rem;
+.contact {
+  flex-basis: 30rem;
 }
 
-.contact h2{
-    font-size: 3rem;
-    font-weight: 600;
-    margin: 2rem 0rem;
+.contact h2 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 2rem 0rem;
 }
 
-.contact p{
-    font-size: 1.5rem;
-    line-height: 2rem;
+.contact p {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
-.cursor{
-    height: 50px;
-    width: 50px;
-    border-radius: 50px;
-    border: 2px solid white;
-    position: absolute;
-    transform: translate(-50%, -50%);
+.cursor {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: 2px solid white;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 0.4s ease-in-out;
+  transition-property: transform, background-color;
+  transform-origin: 75% 75%;
+  z-index: -1;
 }
+
+.cursor.nav-active {
+  transform: scale(3);
+  background-color: rgb(104, 56, 194);
+}
+
+.cursor.exp-active {
+  transform-origin: 75% 90%;
+  transform: scale(3);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.6rem;
+}
+
+.scrollmagic-pin-spacer {
+  position: static;
+  pointer-events: none;
+}
+
+
