@@ -8,6 +8,7 @@ body {
   background-color: #17181a;
   font-family: Montserrat;
   pointer-events: none;
+  position: relative;
 }
 
 body.hide{
@@ -50,6 +51,7 @@ header {
 
 main{
     pointer-events: none;
+    position: absolute;
 }
 
 .slide {
@@ -206,6 +208,28 @@ main{
   pointer-events: none;
 }
 
+/* transition slides */
+
+.swipe{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+}
+
+.swipe1{
+  background: rgb(149,170,203);
+  z-index: 6;
+}
+.swipe2{
+  background: rgb(204, 34, 60);
+  z-index: 5;
+}
+.swipe3{
+  background: rgb(255, 139, 93);
+}
 
 /* another page */
 
@@ -226,6 +250,7 @@ main{
 .image{
   height: 80vh;
   flex-basis: 30rem;
+  position: relative;
 }
 
 .image img{
