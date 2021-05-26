@@ -52,7 +52,7 @@ main{
     pointer-events: none;
 }
 
-section {
+.slide {
   display: flex;
   width: 80%;
   margin: auto;
@@ -204,4 +204,70 @@ section {
 .scrollmagic-pin-spacer {
   position: static;
   pointer-events: none;
+}
+
+
+/* another page */
+
+.detail-slide{
+  min-height: 90vh;
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-top: 5rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: -2;
+}
+
+.image{
+  height: 80vh;
+  flex-basis: 30rem;
+}
+
+.image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.text{
+  flex: 1;
+  position: relative;
+  flex-basis: 25rem;
+}
+
+.text h2{
+  font-size: 5.5rem;
+  margin: 3rem 0rem;
+  letter-spacing: 0.2rem;
+}
+
+.fashion-1 h2{
+  color: rgb(201,70,2);
+}
+.fashion-2 h2{
+  color: rgb(149,170,203);
+}
+.fashion-3 h2{
+  color: rgb(196,83,106);
+}
+
+.text p{
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  letter-spacing: 0.2rem;
+  margin: 3rem 5rem 0rem 0rem;
+}
+
+.fashion-nr{
+  position: absolute;
+  font-weight: 600;
+  font-size: 13rem;
+  top: 70%;
+  left: 40%;
+  opacity: 0.2;
 }
