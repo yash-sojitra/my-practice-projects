@@ -1,0 +1,102 @@
+"oneDarkPro.editorTheme": "justBlack",
+"editor.tokenColorCustomizations": {
+  "keywords": "#FF0000",
+  "comments": "#b11e1e",
+  
+  "textMateRules": [
+      {
+       "scope": ["string.quoted.double.html","string.quoted.single.html"],
+       "settings": {
+         "foreground": "#c3ff4d",
+      },
+
+      },
+      {
+       "scope": ["text.html.derivative"],
+       "settings": {
+         "foreground": "#ffffff",
+      },
+
+      },
+      {
+       "scope": ["punctuation.definition.string.begin.html","punctuation.definition.string.end.html"],
+       "settings": {
+         "foreground": "#ff00ff",
+      },
+
+      },
+      {
+       "scope": ["punctuation.definition.tag.begin.html","punctuation.definition.tag.end.html"],
+       "settings": {
+         "foreground": "#a153ce",
+      },
+
+      },
+      {
+       "scope": ["entity.other.attribute-name.html"],
+       "settings": {
+         "foreground": "#63aa2d",
+      },
+
+      },
+      {
+       "scope": ["entity.name.tag.html"],
+       "settings": {
+         "foreground": "#e00f0f",
+      },
+
+      },
+      {
+       "scope": ["punctuation.separator.key-value.html"],
+       "settings": {
+         "foreground": "#ffffff",
+      },
+
+      },
+  ]  
+},
+
+//for aurora X
+
+"editor.tokenColorCustomizations": {
+  "textMateRules": [
+      {
+          "scope": ["entity.name.tag.html"],
+          "settings": {
+            "foreground": "#2aad09",
+          }
+      },
+      {
+          "scope": ["entity.other.attribute-name.html"],
+          "settings": {
+            "foreground": "#9e4c09",
+          }
+      },
+      {
+          "scope": ["punctuation.definition.tag.begin.html","punctuation.definition.tag.end.html"],
+          "settings": {
+            "foreground": "#015c50",
+          }
+      },
+
+      //javascript
+      {
+          "scope": ["entity.name.function.js"],
+          "settings": {
+            "foreground": "#00d400",
+          }
+      },
+      {
+          "scope": ["storage.type.js"],
+          "settings": {
+            "foreground": "#009643",
+          }
+      },
+      {
+          "scope": ["entity.name.function.member"],
+          "settings": {
+            "foreground": "#88ff00",
+          }
+      },
+  ]
+}

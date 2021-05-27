@@ -33,7 +33,6 @@ function animateSLides() {
       reverse: false,
     })
       .setTween(slideTl)
-      .addIndicators({ startColor: "white", name: "slide" })
       .addTo(Controller);
 
     //creating a new animation for each page
@@ -52,7 +51,6 @@ function animateSLides() {
     })
       .setPin(slide, { pushFollowers: false })
       .setTween(pageTl)
-      .addIndicators({ name: "page", indent: 200 })
       .addTo(Controller);
   });
 }
@@ -140,7 +138,6 @@ function animateImages() {
     })
       .setPin(slide, { pushFollowers: false })
       .setTween(slideTl)
-      .addIndicators()
       .addTo(controller);
   });
 }
