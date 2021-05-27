@@ -234,14 +234,13 @@ main{
 /* another page */
 
 .detail-slide{
-  min-height: 90vh;
+  min-height: 100vh;
   width: 70%;
   margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  margin-top: 5rem;
   flex-wrap: wrap;
   position: relative;
   z-index: -2;
