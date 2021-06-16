@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section{
+    height: 100vh;
+    z-index: 3;
+}
+
+.rectangle{
+    width: 700px;
+    height: 500px;
+    background: rgb(226, 85, 85);
+    border-radius: 10px;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+}
+
+.diamond{
+    
+    height: 100px;
+    width: 100px;
+    transform: rotate(45deg);
+    border-radius: 5px;
+    position: absolute;
+    top: 65%;
+    right: 35%;
+    background: rgb(0, 255, 255);
+}
+
+.back{
+    position: absolute;
+    top: 100%;
+    height: 100vh;
+    width: 100vw;
+    background: rgb(0, 0, 0);
+}
