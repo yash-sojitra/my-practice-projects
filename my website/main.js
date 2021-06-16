@@ -1,14 +1,8 @@
-const burgerBtn = document.querySelector(".burger");
-const closeBtn = document.querySelector(".close");
-const navbar = document.querySelector(".navbar");
-const list = document.querySelector(".navbar ul");
+//initializing swiper
 
-burgerBtn.addEventListener("click", () => {
-  navbar.style.left = "0vw";
-  list.style.opacity = "1";
-});
-
-closeBtn.addEventListener("click", () => {
-  navbar.style.left = "-100vw";
-  list.style.opacity = "0";
-});
+new Splide(".splide", {
+  type: "loop",
+  pagination: false,
+  focus: 'center',
+  autoplay: true,
+}).mount();

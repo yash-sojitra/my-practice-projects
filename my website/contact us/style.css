@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+============
+font families     
+============
+   
+---------------------------------------
+
+font-family: 'Nixie One', cursive;
+font-family: 'Raleway', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Pattaya', sans-serif;
+font-family: 'Cinzel Decorative', cursive;
+font-family: 'Petit Formal Script', cursive;
+
+---------------------------------------
+*/
+
+main {
+  display: flex;
+  width: 100%;
+  height: 90vh;
+}
+
+section {
+  width: 50%;
+  height: 100%;
+  margin: 4rem;
+}
+
+.title {
+  margin-bottom: 3rem;
+}
+
+.title h1 {
+  font: bold 3rem "Raleway", sans-serif;
+  margin-bottom: 3rem;
+}
+
+.title p {
+  font: 1rem/2rem "Roboto", sans-serif;
+  letter-spacing: 2px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.name-input,
+.email-input,
+.message-input {
+  width: 100%;
+  margin: auto;
+  font: 1rem "Roboto", sans-serif;
+}
+
+form p {
+  font-size: 0.9rem;
+  margin-bottom: 3px;
+  margin-left: 3px;
+  letter-spacing: 1px;
+}
+
+#name,
+#email {
+  font: lighter 1rem "Roboto", sans-serif;
+  width: 100%;
+  padding: 8px;
+  height: 3rem;
+  margin-bottom: 2rem;
+}
+
+textarea {
+  width: 100%;
+  margin-bottom: 2rem;
+  padding: 10px;
+  font: lighter 1rem "Roboto", sans-serif;
+  resize: none;
+}
+
+#name,
+#email,
+textarea {
+  border: none;
+  background-color: rgb(235, 235, 235);
+  border-radius: 0.5rem;
+}
+
+.button {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button input {
+  font: lighter 1rem "Roboto", sans-serif;
+  padding: 1rem 2rem;
+  border-radius: 60rem;
+  letter-spacing: 1px;
+  border: none;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.other-info {
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 1.75rem 0rem 4rem 2rem;
+}
+
+.other-info h1 {
+  font: bold 3rem "Raleway", sans-serif;
+}
+
+section h2 {
+  font: lighter 2.5rem "Roboto", sans-serif;
+}
+
+.other-info p{
+    font: 1.2rem/1.8rem 'Roboto', sans-serif;
+    margin-top: 1rem;
+    letter-spacing: 1px;
+}
+
+.social-links a{
+    font-size: 2.5rem;
+    text-decoration: none;
+}
+
+.fab{
+    margin: 1rem 1.5rem; 
+}
+
+.fa-facebook{
+    /* color: 	#4267B2; */
+    color: 	rgb(39, 39, 39);
+}
+
+.fa-instagram{
+    color: rgb(39, 39, 39);
+}
+
+.fa-youtube{
+    /* color: #ff0000; */
+    color: rgb(39, 39, 39);
+}

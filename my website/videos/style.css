@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-y: hidden;
+}
+
+/*
+============
+font families     
+============
+   
+---------------------------------------
+
+font-family: 'Nixie One', cursive;
+font-family: 'Raleway', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Pattaya', sans-serif;
+font-family: 'Cinzel Decorative', cursive;
+font-family: 'Petit Formal Script', cursive;
+
+---------------------------------------
+*/
+
+.navbar {
+  position: static;
+}
+
+.slides {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.slide {
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slides h1 {
+  font-size: clamp(2.5rem, 3vw, 5.5rem);
+  font-weight: lighter;
+  font-family: "Raleway", sans-serif;
+  font-style: italic;
+}
+
+.slide h1 a {
+  text-decoration: none;
+  color: black;
+}
+
+/* second page */
+
+main {
+  display: flex;
+  width: 100%;
+  height: 90vh;
+}
+
+.info-text {
+  width: 40%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  width: 80%;
+  margin: auto;
+}
+
+.title h1 {
+  font-weight: lighter;
+  font-family: "Raleway", sans-serif;
+  font-style: italic;
+  font-size: 5rem; /* clamp */
+  text-align: center;
+}
+
+.title p {
+  font-size: 1.5rem;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  margin: 3rem 0rem;
+}
+
+.videos {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 60%;
+}
+
+.video {
+  display: flex;
+  height: 50%;
+}
+
+.list-1 {
+  align-items: flex-end;
+}
+
+.video img {
+  width: auto;
+  height: 200px;
+  margin: 0.5rem;
+}
+
+#a1 {
+  height: 35vh;
+}
+
+#a2 {
+  height: 27vh;
+}
+
+#a3 {
+  height: 30vh;
+}
+
+#a4 {
+  height: 25vh;
+}
+
+#a5 {
+  height: 28vh;
+}
+
+#b1 {
+  height: 30vh;
+}
+
+#b2 {
+  height: 37vh;
+}
+
+#b3 {
+  height: 32vh;
+}
+
+#b4 {
+  height: 34vh;
+}
+
+#b5 {
+  height: 27vh;
+}
+
+.image::after{
+    content: 'his+her';
+    font: lighter italic 1rem  'Cinzel Decorative', cursive;
+    color: white;
+}
+
+/* video page */
+
+.video-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video-play {
+  margin: 3rem 0rem;
+  justify-self: flex-start;
+}
+
+video {
+  width: 60vw;
+}
+
+.text h1 {
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Cinzel Decorative", cursive;
+}
