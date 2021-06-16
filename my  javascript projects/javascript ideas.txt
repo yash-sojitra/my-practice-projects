@@ -4,7 +4,7 @@ How to create a review carousel (done)
 How to create a responsive navbar (done)
 How to create a sidebar (done)
 How to create a modal(done)
-How to create a FAQ page
+How to create a FAQ page 
 How to create a restaurant menu page
 How to create a video background
 How to create a navigation bar on scroll
@@ -12,7 +12,7 @@ How to create tabs that display different content
 How to create a countdown clock
 How to create your own Lorem ipsum
 How to create a grocery list
-How to create an image slider
+How to create an image slider (done)
 How to create a Rock Paper Scissors game    (done)
 How to create a Simon Game
 How to create a Platformer Game
