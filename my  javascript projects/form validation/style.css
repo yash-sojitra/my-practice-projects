@@ -1,0 +1,76 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    width: 100%;
+    padding: 3rem;
+    text-align: center;
+    font-size: 3rem;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+div{
+    position: relative;
+    margin: 1.5rem;
+}
+
+p{
+    font-size: 1.5rem;
+}
+
+.msg{
+    font-size: 1rem;
+}
+
+input{
+    border: 2px solid black;
+    background-color: rgb(255, 255, 255);
+    height: 2rem;
+    width: 20rem;
+    font-size: 1.3rem;
+}
+
+button{
+    border: none;
+    background-color: black;
+    color: white;
+}
+
+.see{
+    height: 2rem;
+    padding: 0rem 0.5rem;
+    font-size: 1.1rem;
+    position: absolute;
+}
+
+.submit-btn{
+    width: 6rem;
+    margin: 4rem auto;
+    padding: 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* javascript styles */
+
+.invalid{
+    border: 2px solid rgb(161, 0, 0);
+}
+
+.valid{
+    border: 2px solid rgb(24, 146, 0);
+}
