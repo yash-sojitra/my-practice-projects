@@ -1,9 +1,9 @@
 const http = require("http");
 const fs = require("fs");
-const html = fs.readFileSync("../../counter/index.html");
+const html = fs.readFileSync('../../coloors/index.html');
 
 const server = http.createServer((req, res) => {
-  (res.statusCode = 200), res.setHeader("Content-type", "HTML");
+  (res.statusCode = 200), res.setHeader("Content-Type", "text/html");
   res.end(html);
 });
 
