@@ -10,7 +10,7 @@
 
 <body>
     <h1 align="center">Registation Form</h1>
-    <form>
+    <form onsubmit="return validateForm()" method="POST" name='rform'>
         <table>
             <tr>
                 <td>first name</td>
@@ -122,16 +122,17 @@
             <tr>
                 <td colspan="3">
                     <center>
-                        <button name="submit">submit</button>
-                        <button name="reset">reset</button>
+                        <input type="submit" name="submit" value="submit">
+                        <input type="reset" name="reset" value="reset">
                     </center>
                 </td>
             </tr>
     </form>
     </table>
-<a href="homepage.html">
-    <h6>to go to home page click here</h6>
-</a>
 </body>
+
+<script>    
+
+</script>
 
 </html>
