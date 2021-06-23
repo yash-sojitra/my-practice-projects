@@ -29,12 +29,16 @@ font-family: 'Petit Formal Script', cursive;
     background-color: black;
 }
 
+.nav-bar p{
+  display: none;
+}
+
 .burger{
-    position: absolute;
     display: none;
     top: 1.75rem;
     right: 2rem;
     z-index: 2;
+    margin: auto;
   }
 
 .nav-bar ul{
@@ -69,6 +73,8 @@ font-family: 'Petit Formal Script', cursive;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    transform: translateX(-100%);
   }
   .navbar p{
     display: flex;
@@ -105,12 +111,19 @@ font-family: 'Petit Formal Script', cursive;
   .burger{
     display: flex;
     flex-direction: column;
+    cursor: pointer;
+    width: 80%;
+    margin: auto;
+    padding:2rem 0rem;
+    justify-content: center;
+    align-items: flex-end;
   }
+
   .line{
     width: 40px;
     height: 3px;
     border-radius: 50px;
-    background-color: white;
+    background-color: black;
     margin: 4px;
   }
 }

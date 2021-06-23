@@ -91,3 +91,9 @@ main{
 .photo:hover::after{
     opacity: 1;
 }
+
+/* @media only screen (max-width: 1200px){
+    .main{
+
+    }
+} */
