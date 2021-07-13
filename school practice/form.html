@@ -6,6 +6,124 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>registation form</title>
+    <script>
+        function validateForm() {
+            var fname = document.rform.txtfname.value;
+
+            if (fname == '' || fname == null) {
+                alert('please enter your first name properly')
+                document.rform.txtfname.focus()
+                return false;
+            }
+
+            var lname = document.rform.txtlname.value;
+
+            if (lname == '' || lname == null) {
+                alert('please enter your surname properly')
+                document.rform.txtlname.focus()
+                return false;
+            }
+
+            var address = document.rform.txtadr.value;
+
+            if (address == '' || address == null) {
+                alert('please enter your address properly')
+                document.rform.txtadr.focus()
+                return false;
+            }
+
+            var city = document.rform.drpcity.value;
+
+            if (city == '' || city == null) {
+                alert('please select your city')
+                document.rform.drpcity.focus()
+                return false;
+            }
+
+            var pincode = document.rform.txtpcode.value;
+
+            if (pincode == '' || pincode == null || isNaN(pincode) || pincode.length != 6) {
+                alert('please enter 6 digts pincode ')
+                document.rform.txtpcode.focus()
+                return false;
+            }
+
+            var state = document.rform.drpstate.value;
+
+            if (state == '' || state == null) {
+                alert('please select your state')
+                document.rform.drpstate.focus()
+                return false;
+            }
+
+            var country = document.rform.drpcountry.value;
+
+            if (country == '' || country == null) {
+                alert('please select your country')
+                document.rform.drpcountry.focus()
+                return false;
+            }
+
+            if (document.rform.Gender[1].checked == false &&
+                document.rform.Gender[2].checked == false
+            ) {
+                alert('please select your gender')
+                return false;
+            }
+
+            if (document.rform.Gender[0].checked == false &&
+                document.rform.Gender[1].checked == false
+            ) {
+                alert('please select your gender')
+                return false;
+            }
+        //  if (document.rform.reading.checked == false &&
+        //      document.rform.dancing.checked == false &&
+        //      document.rform.playing.checked == false &&
+        //      document.rform.singing.checked == false
+        //  ) {
+        //     alert('please select at least 1 hobby ')
+        //      return false;
+        // }
+
+            var email = document.rform.txtemail.value;
+
+            if (email == '' || email == null) {
+                alert('please enter your email properly')
+                document.rform.txtemail.focus()
+                return false;
+            }
+
+            var Contact = document.rform.txtcontact.value;
+
+            if (Contact == '' || isNaN(Contact) || Contact != 10) {
+                alert('please enter your Contact properly')
+                document.rform.txtcontact.focus()
+                return false;
+            }
+
+            var password = document.rform.txtpswd.value;
+
+            if (password == '' || password < 8) {
+                alert('your password must be at least 8 digits long')
+                document.rform.txtpswd.focus()
+                return false;
+            }
+            else if (password == '') {
+                alert('enter your password ')
+                document.rform.txtpswd.focus()
+                return false;
+            }
+
+            var cpassword = document.rform.txtcpswd.value;
+
+            if (cpassword == '' || cpassword == null || cpassword != password) {
+                alert('please enter password again')
+                document.rform.txtcpswd.focus()
+                return false;
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -32,7 +150,7 @@
                 <td>&nbsp;&nbsp;</td>
                 <td>
                     <select name="drpcity" id="">
-                        <option value="select your city">select your city</option>
+                        <option value="">select your city</option>
                         <option value="rajkot">rajkot</option>
                         <option value="ahemdabad">ahemdabad</option>
                         <option value="gandhinagar">gandhinagar</option>
@@ -116,7 +234,7 @@
             <tr>
                 <td>Confirm Password</td>
                 <td>&nbsp;&nbsp;</td>
-                <td><input type="password" name=""></td>
+                <td><input type="password" name="txtcpswd"></td>
             </tr>
             <tr></tr>
             <tr>
@@ -131,8 +249,6 @@
     </table>
 </body>
 
-<script>    
 
-</script>
 
 </html>
