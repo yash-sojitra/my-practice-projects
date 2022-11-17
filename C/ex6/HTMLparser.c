@@ -37,10 +37,9 @@ void selector(char arr[], int len)
     }
 }
 
-
 int main(int argc, char const *argv[])
 {
-    char HTML[] = "<byee> yash </byee>";
+    char HTML[] = "<header> yash </header>";
     printf("\narray before parsing :\n");
     puts(HTML);
     printf("\n");
