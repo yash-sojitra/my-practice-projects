@@ -1,0 +1,58 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#title {
+    background-color: #ff4c68;
+    height: 90%;
+    overflow: hidden;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 3.5rem;
+    size: 3rem;
+    line-height: 1.5;
+    color: white;
+}
+
+.container-fluid {
+    padding: 2% 15%;
+}
+
+/* navigation bar */
+
+.navbar {
+    padding: 0 0 4.5rem;
+}
+
+
+.navbar-brand {
+    font-size: 2.5rem;
+    font-family: 'ubuntu', sans-serif;
+    font-weight: bold;
+}
+
+.nav-item {
+    padding: 0 18px;
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+
+.fa-brands {
+    margin-right: 0.625rem;
+}
+
+
+/* download buttons */
+
+.download-button {
+    margin: 5% 3% 5% 0;
+}
+
+/* title image */
+
+.iphone {
+    width: 60%;
+    transform: rotate(25deg);
+}
