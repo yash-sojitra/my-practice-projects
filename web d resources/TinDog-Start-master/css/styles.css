@@ -16,6 +16,11 @@ h1 {
     color: white;
 }
 
+h2 {
+    font-weight: 700;
+    font-size: 3rem;
+}
+
 .container-fluid {
     padding: 2% 15%;
 }
@@ -55,4 +60,63 @@ h1 {
 .iphone {
     width: 60%;
     transform: rotate(25deg);
+}
+
+/* features */
+
+#features {
+    padding:7% 15% ;
+}
+
+.cards{
+    text-align: center;
+}
+
+.features-logo {
+    font-size: 4.5rem;
+    padding: 1.3rem 0;
+    color: #ef8172;
+}
+
+.cards>h3 {
+    font-size: 1.5rem;
+    font-weight: 750;
+}
+
+.cards>p {
+    color: #8f8f8f;
+    padding: 0 2.4rem;
+}
+
+.features-logo:hover {
+    color: #ff4c68;
+}
+
+/* testimonials section  */
+
+#testimonials {
+    background-color: #ef8172;
+    text-align: center;
+    color: white;
+}
+
+.carousel-item {
+    padding: 7% 15%;
+}
+
+.testimonial-image {
+    width: 10%;
+    border-radius: 100%;
+    margin: 20px;
+}
+
+#press {
+    background-color: #ef8172;
+    text-align: center;
+    padding: 3%;
+}
+
+.press-image {
+    width: 15%;
+    margin: 20px 20px 50px;
 }
