@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 int main()
 {
     printf("yash sojitra \n");

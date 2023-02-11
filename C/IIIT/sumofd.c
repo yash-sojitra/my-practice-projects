@@ -1,16 +1,11 @@
 #include <stdio.h>
-
-int main()
-{
+void main(){
     int x,sum;
     scanf("%d", &x);
-
-    while(x)
-    {
+    while(x){
         int digit = x%10;
         sum = sum + digit;
         x/=10;
     }
     printf("%d",sum);
-    return 0;
 }

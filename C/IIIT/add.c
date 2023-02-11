@@ -1,12 +1,7 @@
 #include <stdio.h>
-
-int main(){
-
+void main(){
     int x,y;
-    scanf("%d",&x);
-    scanf("%d",&y);
-
+    printf("enter two numbers :\n");
+    scanf("%d %d",&x,&y);
     printf("ans = %d\n",x-(~y)-1);
-
-    return 0;
 }
