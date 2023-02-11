@@ -1,0 +1,1 @@
+b[i], b[len(a)-i-1] = b[len(a)-i-1],b[i]

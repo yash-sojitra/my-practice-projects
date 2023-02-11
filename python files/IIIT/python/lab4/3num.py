@@ -1,24 +1,28 @@
-x = 67
-y = 67
-z = 30
+x = int(input("Enter first number : \n"))
+y = int(input("Enter second number : \n"))
+z = int(input("Enter third number : \n"))
+
+print("x = ",x)
+print("y = ",y)
+print("z = ",z)
 
 if (x>y and x>z):
-    print("x is greater than y and z")
+    print("x is greater than y and z.")
 
 elif (y>x and y>z):
-    print("y is greater than x and z")
+    print("y is greater than x and z.")
 
 elif (z>x and z>y):
-    print("z is greater than x and y")
+    print("z is greater than x and y.")
 
 elif (x==y and x>z):
-    print("x and y are equal and greater than z")
+    print("x and y are equal and greater than z.")
 
 elif (x==z and x>y):
-    print("x and z are equal and greater than y")
+    print("x and z are equal and greater than y.")
     
 elif (y==z and y>x):
-    print("y and z are equal and greater than x")
+    print("y and z are equal and greater than x.")
     
 else:
-    print("all are equal")
+    print("all are equal.")

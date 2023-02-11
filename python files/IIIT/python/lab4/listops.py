@@ -14,5 +14,5 @@ print(len(lang),"\n")
 lang.pop()
 print(lang,"\n")
 
-print(lang,"\n")
 lang.clear()
+print(lang,"\n")

@@ -68,26 +68,26 @@ const game = () => {
         }
       }
       if (playerchoice === "paper") {
-        if (computerchoice === "scissors") {
-          winner.textContent = "Computer wins";
+        if (computerchoice === "rock") {
+          winner.textContent = "Player wins";
           cscore++;
           updatescore();
           return;
         } else {
-          winner.textContent === "Player wins";
+          winner.textContent === "Computer wins";
           pscore++;
           updatescore();
           return;
         }
       }
       if (playerchoice === "scissors") {
-        if (computerchoice === "rock") {
-          winner.textContent = "Computer wins";
+        if (computerchoice === "paper") {
+          winner.textContent = "Player wins";
           cscore++;
           updatescore();
           return;
         } else {
-          winner.textContent === "Player wins";
+          winner.textContent === "Computer wins";
           pscore++;
           updatescore();
 
