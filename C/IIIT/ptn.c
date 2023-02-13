@@ -94,6 +94,39 @@ void printPtn3(int choice, int r)
     }
 }
 
+void printPtn4(int r)
+{
+    for (int i = 0; i <=r; i++)
+    {
+        for (int j = 0; j <=2*r; j++)
+        {
+            if (j >= i && j <= (2*r)-i)
+                    printf("%c ", '*');
+                else
+                    printf("%c ", ' ');
+        }
+        printf("\n");
+    }
+}
+
+void pascal(int r)
+{
+    for (int i = 0; i < r; i++)
+    {
+        int coef = 1;
+        for (int k =r-i; k > 0; k--)
+            printf("%c",' ');
+
+        for (int j = 1; j <=i; j++)
+        {
+            printf("%d%c",coef,' ');
+            coef = coef * (i-j)/j;
+        }
+        printf("\n");
+    }
+    
+}
+
 void main(){
     
     printPtn1(0,5);
@@ -104,5 +137,8 @@ void main(){
     printPtn2(2,5);
     printPtn3(0,4);
     printPtn3(1,4);
+    printPtn4(4);
+    pascal(6);
+    printPtn1(3,4);
 
 }
