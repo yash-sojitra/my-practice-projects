@@ -128,7 +128,7 @@ void pascal(int r)
 }
 
 void main(){
-    
+  
     printPtn1(0,5);
     printPtn1(1,5);
     printPtn1(2,5);
@@ -140,5 +140,4 @@ void main(){
     printPtn4(4);
     pascal(6);
     printPtn1(3,4);
-
 }

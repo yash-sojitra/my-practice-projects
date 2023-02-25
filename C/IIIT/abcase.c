@@ -24,7 +24,7 @@ void main(){
     puts(str);
     upperCase(str,n);
     puts(str);
-    printf("without using predefined function :\n");
+    printf("with using predefined function :\n");
     strlwr(str);
     puts(str);
     strupr(str);

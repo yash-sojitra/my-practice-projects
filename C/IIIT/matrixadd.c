@@ -1,23 +1,20 @@
 #include <stdio.h>
 
-void printMatrix(int* arr[3][3])
+void main()
 {
-    for (int k = 0; k < 3; k++)
-    {
-        for (int  l = 0; l < 3; l++)
-        {
-            printf("%d ",arr[k][l]);
-        }
-        printf("\n");
+    int mat1[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}},  mat2[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}}, sum[3][3];
+
+    printf("Enter matrix 1 elements:\n");
+    for(int i = 0; i < 3; i++){
+        for(int j = 0; j < 3; j++)
+            scanf("%d", &mat1[i][j]);
     }
-}
 
-
-int main()
-{
-    int mat1[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-    int mat2[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-    int sum[3][3];
+    printf("Enter matrix 2 elements:\n");
+    for(int i = 0; i < 3; i++){
+        for(int j = 0; j < 3; j++)
+            scanf("%d", &mat2[i][j]);
+    }
 
     for (int i = 0; i < 3; i++)
     {
@@ -27,14 +24,10 @@ int main()
         }
     }
 
-    printf("matrix 1: \n");
-    printMatrix(&mat1[0][0]);
-
-    printf("matrix 2: \n");
-    printMatrix(&mat2[0][0]);
-
     printf("sum: \n");
-    printMatrix(&sum[0][0]);
-    
-    return 0;
+    for(int i = 0; i < 3; i++){
+        for(int j = 0; j < 3; j++)
+            printf("%d ", sum[i][j]);
+        printf("\n");
+    }
 }
