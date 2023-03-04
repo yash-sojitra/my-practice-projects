@@ -7,7 +7,7 @@ void main(){
     printf("Address of array: %p\n", &array);
     int *ptr = malloc(5 * sizeof(int));
     printf("\nHeap allocation:\n");
-    printf("Size of array: %ld bytes\n", 5 * sizeof(int));
+    printf("Size of array: %ld bytes\n", 5*sizeof(int));
     printf("Address of array: %p\n", ptr);
     free(ptr);
 }

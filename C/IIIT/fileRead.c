@@ -8,6 +8,7 @@ void main( ){
 		printf( "name.txt file failed to open." ) ;
 	else
 		fgets(str,50,fp);
-	fclose(fp) ;
+	fclose(fp);
+	printf("data inside file is: \n\n");
     puts(str);
 }

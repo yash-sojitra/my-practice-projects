@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-void main()
-{
+void main(){
     char str1[128];
     char str2[128];
     printf("enter string 1: \n");
@@ -24,5 +23,4 @@ void main()
         printf("both are same\n");
     else
         printf("both are diff\n");
-
 }

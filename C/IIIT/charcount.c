@@ -20,13 +20,10 @@ int countChar2(char str[], char ch){
 }
 void main(){
     char str[100], ch;
-    int count1, count2;
     printf("Enter a string: ");
     gets(str);
     printf("Enter a character to count: ");
     scanf("%c", &ch);
-    printf("using predefined function: %d\n", count1);
-    count1 = countChar1(str, ch);
-    printf("without using predefined function: %d\n", count2);
-    count2 = countChar2(str, ch);
+    printf("using predefined function: %d\n", countChar1(str, ch));
+    printf("without using predefined function: %d\n", countChar2(str, ch));
 }
