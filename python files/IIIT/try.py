@@ -1,4 +1,2 @@
-for i in range(5):
-    print(i)
-else:
-    print("here")
+import random
+print(random.randint(1,8))
