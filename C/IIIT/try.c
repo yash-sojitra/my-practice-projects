@@ -2,10 +2,7 @@
 
 int main()
 {
-    char str1[] = "hello";
-    char str2[10];
-
-    str2 = str1;
-     
+    char c[] = "GATE2011";
+    char *p =c;printf("%s",p);
     return 0;
 }

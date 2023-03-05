@@ -1,11 +1,10 @@
 #include <stdio.h>
 
-
 void selectionSort(int arr[],int n)
 {
     for (int i = 0; i < n; i++)
     {
-        int min_index = arr[i];
+        int min_index = i;
 
         for(int j = i+1; j < n; j++)
         {
@@ -22,12 +21,12 @@ void selectionSort(int arr[],int n)
 
 int main()
 {
-    int arr[10] = {8,4,6,5,7,2,5,4,9,3};
-    int n = 10;
+    int arr[] = {8,4,6,5,10,6,7,2,5,4,9,9,3};
+    int n = sizeof(arr)/sizeof(arr[0]);
 
-    selectionSort(arr,n);  
+    selectionSort(arr,n);
 
-    int max = arr[9];
+    int max = arr[n-1];
 
     int smax;
 
@@ -41,7 +40,6 @@ int main()
     }
 
     printf("\n%d", smax);
-    
 
     return 0;
 }
