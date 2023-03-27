@@ -18,6 +18,7 @@ int main()
     while (1)
     {
         int choice;
+        int index;
         printf("\nthe array is: \n");
         for (int j = 0; j < n; j++)
         {
@@ -30,14 +31,19 @@ int main()
         {
         case 1:
             n++;
+            printf("enter index number at which you want to insert: \n");
+            scanf("%d",&index);
             ptr = realloc(ptr, (n) * sizeof(int));
+            for (int i = n; i > index; i--)
+            {
+                ptr[i] = ptr[i-1];
+            }
             int val;
             printf("enter the new value:\n");
-            scanf("%d", &ptr[n - 1]);
+            scanf("%d", &ptr[index]);
             break;
 
         case 2:
-            int index;
             printf("enter index number which you want to remove: \n");
             scanf("%d",&index);
             for (int i = index; i < n-1; i++)
@@ -49,11 +55,10 @@ int main()
             break;
 
         case 3:
-            int index2;
             printf("enter index number which you want to update: \n");
-            scanf("%d",&index2);
+            scanf("%d",&index);
             printf("enter the new value: \n");
-            scanf("%d",&ptr[index2]);
+            scanf("%d",&ptr[index]);
             break;
 
         case 4:
