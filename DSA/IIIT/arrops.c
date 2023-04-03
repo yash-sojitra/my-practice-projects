@@ -11,9 +11,6 @@ void main(){
     while (1){
         int choice;
         int index;
-        printf("\nthe array is: \n");
-        for (int j = 0; j < n; j++)
-            printf("%d ", ptr[j]);
         printf("\n\n-->Update Operations\n\n1.Insert\n2.Delete\n3.Update\n4.Search\n5.Traverse\n6.Exit\n\n");
         scanf("%d", &choice);
         switch (choice){

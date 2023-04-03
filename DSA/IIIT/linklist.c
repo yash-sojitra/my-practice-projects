@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 struct Node{
     int data;
     struct Node* next;
@@ -7,31 +7,48 @@ struct Node{
 
 typedef struct Node node;
 
-int main()
-{
-    node one, two, three, four;
+void printList(node* n){
 
-    node* start = &one;
-
-    one.data = 1;
-    one.next = &two;
-    two.data = 2;
-    two.next = &three;
-    three.data = 3;
-    three.next = &four;
-    four.data = 4;
-    four.next = NULL;
-
-    node *t1 = NULL;
-
-    while (start != NULL)
+    while (n != NULL)
     {
-        t1 = start;
-        printf("%d ", t1->data);
-        start = t1->next;
+        printf("%d ",n->data);
+        n = n->next;
     }
+}
+
+void insertFirst(node* head, node* n){
+    node* t1 = n->next;
+    head->next = n;
     
+}
+
+
+int main()
+{  
+
+    node* head = NULL;
+    node* second = NULL;
+    node* third = NULL;
+    node* new = NULL;
+    //node example;
+
+    // example.data = 6;
+    // example.next = head;
+
+    head = (node*)malloc(sizeof(node));
+    second = (node*)malloc(sizeof(node));
+    third = (node*)malloc(sizeof(node));
+
+    printf("enter data for 3 nodes: \n");
+    scanf("%d", &head->data);
+    scanf("%d", &second->data);
+    scanf("%d", &third->data);
+
+    head->next = second;
+    second->next = third;
+    third->next = NULL;
     
+    printList(head);
 
     return 0;
 }
