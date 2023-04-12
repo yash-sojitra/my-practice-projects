@@ -1,0 +1,19 @@
+html{
+    --dark: #374151;
+    --darker: #1f2937;
+    --darkest: #111827;
+    --grey: #6b7280;
+    --pink: #ec4899;
+    --purple: #8b5cf6;
+    --light: #eee;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: var(--dark);
+}
