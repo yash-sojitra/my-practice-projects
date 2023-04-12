@@ -66,6 +66,7 @@
     font-size: 1.25rem;
     font-weight: 700;
     background-image: linear-gradient(to right, var(--pink), var(--purple));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     cursor: pointer;
@@ -147,6 +148,7 @@
    
    .task .actions .edit {
     background-image: linear-gradient(to right, var(--pink), var(--purple));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
    }
