@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-void main(){
+int main(){
     int n;
     printf("enter number of elements in array: ");
     scanf("%d", &n);
@@ -60,4 +60,5 @@ void main(){
         if (choice == 6)
             break;
     }
+    return 0;
 }

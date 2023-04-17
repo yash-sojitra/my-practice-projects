@@ -54,7 +54,7 @@ void pop(node *head){
     free(ptr2->next);
     free(ptr2);
 }
-void main(){
+int main(){
     int n;
     printf("enter length of linked list: \n");
     scanf("%d", &n);
@@ -84,4 +84,5 @@ void main(){
             break;      
     }
     printList(head);
+    return 0;
 }

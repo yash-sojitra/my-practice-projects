@@ -3,7 +3,7 @@ struct student{
     char name[20];
     int age;
 };
-void main(){
+int main(){
     struct student student1, *ptr;
     ptr = &student1;
     printf("entrer name of first student: \n");
@@ -12,4 +12,5 @@ void main(){
     scanf("%d",&student1.age);
     printf("\nname of student 1 is -> %s\n",ptr->name);
     printf("age of student 1 is -> %d",ptr->age);
+    return 0;
 }
