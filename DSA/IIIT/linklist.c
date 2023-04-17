@@ -1,21 +1,27 @@
 #include <stdio.h>
 #include <stdlib.h>
-struct Node{
+#include <conio.h>
+struct Node
+{
     int data;
     struct Node *next;
 };
 typedef struct Node node;
-void printList(node *n){
+void printList(node *n)
+{
     printf("\nthe linked list is:\n");
-    while (n != NULL){
+    while (n != NULL)
+    {
         printf("%d ", n->data);
         n = n->next;
     }
 }
-void createList(node *head, int n){
+void createList(node *head, int n)
+{
     node *ptr;
     ptr = head;
-    for (int i = 1; i < n; i++){
+    for (int i = 1; i < n; i++)
+    {
         node *temp;
         temp = (node *)malloc(sizeof(node));
         scanf("%d", &temp->data);
@@ -24,7 +30,24 @@ void createList(node *head, int n){
         ptr = temp;
     }
 }
-void push(node *head){
+
+// void pushAtFirst(node *head)
+// {
+//     node *temp, *ptr;
+//     ptr = head;
+//     temp = (node *)malloc(sizeof(node));
+//     printf("\nenter the data of new node: \n");
+//     scanf("%d", &temp->data);
+//     printf("hi1");
+//     temp->next = ptr;
+//     printf("hi2");
+//     ptr = temp;
+//     printf("hi3");
+//     head = ptr;
+// }
+
+void push(node *head)
+{
     node *temp, *ptr;
     int n;
     printf("\nenter the node number after which you want to insert:\n");
@@ -33,19 +56,27 @@ void push(node *head){
     temp = (node *)malloc(sizeof(node));
     printf("\nenter the data of new node: \n");
     scanf("%d", &temp->data);
-    for (int i = 1; i < n; i++)
+    for (int i = 0; i < n - 1; i++)
         ptr = ptr->next;
     temp->next = ptr->next;
     ptr->next = temp;
 }
-void pop(node *head){
+
+void popFirst(node *head)
+{
+    head = head->next;
+}
+
+int pop(node *head)
+{
     node *ptr1, *ptr2;
     int n;
     printf("\nenter the node number which you want to delete:\n");
     scanf("%d", &n);
     ptr1 = head;
     ptr2 = head->next;
-    for (int i = 1; i < n - 1; i++){
+    for (int i = 1; i < n - 1; i++)
+    {
         ptr1 = ptr1->next;
         ptr2 = ptr2->next;
     }
@@ -53,8 +84,10 @@ void pop(node *head){
     ptr2->next = NULL;
     free(ptr2->next);
     free(ptr2);
+    return 0;
 }
-int main(){
+int main()
+{
     int n;
     printf("enter length of linked list: \n");
     scanf("%d", &n);
@@ -64,25 +97,37 @@ int main(){
     scanf("%d", &head->data);
     head->next = NULL;
     createList(head, n);
-    while (1){
+    while (1)
+    {
         int choice;
-        printf("\n-->list operations\n\n1. traversal\n2. insertion\n3. deletion\n4.exit\n\nenter choice--> ");
+        printf("\n-->list operations\n\n1. traversal\n2. insertion\n3. insertion at first\n4. deletion\n5. deletion at First\n6. exit\n\nenter choice--> ");
         scanf("%d", &choice);
         switch (choice)
         {
-            case 1:
-                printList(head);
-                break;
-            case 2:
-                push(head);
-                break;
-            case 3:
-                pop(head);
-                break;
-        }
-        if (choice == 4)
-            break;      
+        case 1:
+            printList(head);
+            break;
+        case 2:
+            push(head);
+            break;
+        case 3:
+            node *temp;
+            temp = (node *)malloc(sizeof(node));
+            printf("\nenter the data of new node: \n");
+            scanf("%d", &temp->data);
+            temp->next = head;
+            head = temp;
+        break;
+    case 4:
+        pop(head);
+        break;
+    case 5:
+        head = head->next;
+        break;
     }
-    printList(head);
-    return 0;
+    if (choice == 6)
+        break;
+}
+printList(head);
+return 0;
 }

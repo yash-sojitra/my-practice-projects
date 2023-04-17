@@ -52,7 +52,7 @@ int main(){
         case 5:
             printf("\nthe array is: \n");
             for (int j = 0; j < n; j++)
-                printf("%d ", ptr[j]);
+                printf("%d -> '%d' \n",j , ptr[j]);
             break;
         default:
             break;
