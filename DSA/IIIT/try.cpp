@@ -1,38 +1,70 @@
-#include <iostream>
+#include<stdio.h>
+#include<stdlib.h>
+struct node{
+    int data;
+    struct node * link;
+};
 
-using namespace std;
-
-int main()
+void printlist(struct node * head)
 {
-
-    char s[] = "1010";
-    int k = 2;
-
-    int l = sizeof(s)/sizeof(s[0]);
-        int i = 0 , j = l-1;
-        while(k>=0 && i<=j)
+    if(head == NULL)
+    {
+        printf("list is empty.");
+    }
+    else{
+        struct node * ptr = head;
+        while(ptr!=NULL)
         {
-            if(s[i] == '0' && s[j] == '1')
-            {
-                cout<<123;
-                s[i] == '1';
-                s[j] == '0';
-                i++;
-                j--;
-                k--;
-            }
-            if(s[i] == '1'){
-                cout<<1;
-                i++;
-                cout<<11;
-            }
-
-            if(s[j] == '0'){
-                cout<<12;
-                j--;
-            }
-            // cout<<1234;
+            printf("%d\t", ptr->data);
+            ptr = ptr->link;
         }
-    cout<<s<<endl;
-    return 0;
+    }
+}
+void append(struct node * head_ref,int ndata)
+{
+    struct node * c = (struct node *)malloc(sizeof(struct node));
+    c->data=ndata;
+    c->link=0;
+
+    while((head_ref)->link != 0)
+    {
+        head_ref = (head_ref)->link;
+    }
+    (head_ref)->link = c;
+    c->link = 0;
+}
+
+int main(){
+    struct node * head = (struct node *)malloc(sizeof(struct node));
+    head->data = 10;
+    head->link = NULL;
+    append(head,25);
+    append(head,2);
+    append(head,5);
+    printlist(head);
+    printf("\n");
+
+    struct node * p1 = head->link;
+    struct node * p2 = head;
+    int x;
+    printf("Enter the position of the element you want to delete.\n");
+    scanf("%d", &x);
+    if(x==1)
+    {
+        free(p2);
+        head = p1;
+        p2 = NULL;
+        p1 = NULL;
+    }
+    else{
+        for(int i=1; i<x-1; i++)
+        {
+            p1 = p1->link;
+            p2 = p2->link;
+        }
+        p2->link = p1->link;
+        free(p1);
+        p1=NULL;
+    }
+    printlist(head);
 }
