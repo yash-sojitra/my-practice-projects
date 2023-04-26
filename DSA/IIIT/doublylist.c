@@ -4,6 +4,7 @@
 struct Node
 {
     int data;
+    struct Node *previous;
     struct Node *next;
 };
 typedef struct Node node;
@@ -13,8 +14,7 @@ void printList(node *n)
     int counter = 1;
     while (n != NULL)
     {
-
-        printf("%d: %d\n",counter, n->data);
+        printf("%d: %d\n", counter, n->data);
         counter++;
         n = n->next;
     }
@@ -30,27 +30,27 @@ void createList(node *head, int n)
         scanf("%d", &temp->data);
         temp->next = NULL;
         ptr->next = temp;
+        temp->previous = ptr;
         ptr = temp;
     }
 }
 
-node* pushAtFirst(node *head)
+node *pushAtFirst(node *head)
 {
     node *temp, *ptr;
     ptr = head;
     temp = (node *)malloc(sizeof(node));
     printf("\nenter the data of new node: \n");
     scanf("%d", &temp->data);
-    printf("hi1");
+    temp->previous = NULL;
     temp->next = ptr;
-    printf("hi2");
+    ptr->previous = temp;
     ptr = temp;
-    printf("hi3");
     head = ptr;
     return head;
 }
 
-void push(node *head)
+void push(node *head)  
 {
     node *temp, *ptr;
     int n;
@@ -63,12 +63,15 @@ void push(node *head)
     for (int i = 0; i < n - 1; i++)
         ptr = ptr->next;
     temp->next = ptr->next;
+    temp->next->previous = temp;
     ptr->next = temp;
+    temp->previous = ptr;
 }
 
-node* popFirst(node *head)
+node *popFirst(node *head)
 {
     head = head->next;
+    head->previous = NULL;
     return head;
 }
 
@@ -86,7 +89,9 @@ void pop(node *head)
         ptr2 = ptr2->next;
     }
     ptr1->next = ptr2->next;
+    ptr1->next->previous = ptr1;
     ptr2->next = NULL;
+    ptr2->previous = NULL;
     free(ptr2->next);
     free(ptr2);
 }
@@ -100,6 +105,7 @@ int main()
     printf("enter data of linked list: \n");
     scanf("%d", &head->data);
     head->next = NULL;
+    head->previous = NULL;
     createList(head, n);
     while (1)
     {
@@ -116,23 +122,16 @@ int main()
             break;
         case 3:
             head = pushAtFirst(head);
-            // node *temp;
-            // temp = (node *)malloc(sizeof(node));
-            // printf("\nenter the data of new node: \n");
-            // scanf("%d", &temp->data);
-            // temp->next = head;
-            // head = temp;
-        break;
-    case 4:
-        pop(head);
-        break;
-    case 5:
-        head = popFirst(head);
-        break;
+        case 4:
+            pop(head);
+            break;
+        case 5:
+            head = popFirst(head);
+            break;
+        }
+        if (choice == 6)
+            break;
     }
-    if (choice == 6)
-        break;
-}
-printList(head);
-return 0;
+    printList(head);
+    return 0;
 }

@@ -33,6 +33,7 @@ function animateSLides() {
       reverse: false,
     })
       .setTween(slideTl)
+      .addIndicators()
       .addTo(Controller);
 
     //creating a new animation for each page

@@ -1,24 +1,24 @@
-#include <stdio.h>
+#include <stdio.>
 #include <stdlib.h>
-#include <conio.h>
+
 struct Node
 {
     int data;
     struct Node *next;
 };
+
 typedef struct Node node;
+
 void printList(node *n)
 {
     printf("\nthe linked list is:\n");
-    int counter = 1;
     while (n != NULL)
     {
-
-        printf("%d: %d\n",counter, n->data);
-        counter++;
+        printf("%d ", n->data);
         n = n->next;
     }
 }
+
 void createList(node *head, int n)
 {
     node *ptr;
@@ -34,22 +34,6 @@ void createList(node *head, int n)
     }
 }
 
-node* pushAtFirst(node *head)
-{
-    node *temp, *ptr;
-    ptr = head;
-    temp = (node *)malloc(sizeof(node));
-    printf("\nenter the data of new node: \n");
-    scanf("%d", &temp->data);
-    printf("hi1");
-    temp->next = ptr;
-    printf("hi2");
-    ptr = temp;
-    printf("hi3");
-    head = ptr;
-    return head;
-}
-
 void push(node *head)
 {
     node *temp, *ptr;
@@ -60,23 +44,17 @@ void push(node *head)
     temp = (node *)malloc(sizeof(node));
     printf("\nenter the data of new node: \n");
     scanf("%d", &temp->data);
-    for (int i = 0; i < n - 1; i++)
+    for (int i = 1; i < n; i++)
         ptr = ptr->next;
     temp->next = ptr->next;
     ptr->next = temp;
-}
-
-node* popFirst(node *head)
-{
-    head = head->next;
-    return head;
 }
 
 void pop(node *head)
 {
     node *ptr1, *ptr2;
     int n;
-    printf("\nenter the node number which you want to delete:\n");
+    printf("\nenter the node number to delete:\n");
     scanf("%d", &n);
     ptr1 = head;
     ptr2 = head->next;
@@ -90,7 +68,8 @@ void pop(node *head)
     free(ptr2->next);
     free(ptr2);
 }
-int main()
+
+void main()
 {
     int n;
     printf("enter length of linked list: \n");
@@ -104,35 +83,27 @@ int main()
     while (1)
     {
         int choice;
-        printf("\n-->list operations\n\n1. traversal\n2. insertion\n3. insertion at first\n4. deletion\n5. deletion at First\n6. exit\n\nenter choice--> ");
+        printf("\n-->list operations\n\n1. traversal\n2. insertion\n3. deletion\n4.exit\n\nenter choice--> ");
         scanf("%d", &choice);
         switch (choice)
         {
+
         case 1:
             printList(head);
             break;
+
         case 2:
             push(head);
             break;
+
         case 3:
-            head = pushAtFirst(head);
-            // node *temp;
-            // temp = (node *)malloc(sizeof(node));
-            // printf("\nenter the data of new node: \n");
-            // scanf("%d", &temp->data);
-            // temp->next = head;
-            // head = temp;
-        break;
-    case 4:
-        pop(head);
-        break;
-    case 5:
-        head = popFirst(head);
-        break;
+            pop(head);
+            break;
+        }
+
+        if (choice == 4)
+            break;
     }
-    if (choice == 6)
-        break;
-}
-printList(head);
-return 0;
+
+    printList(head);
 }

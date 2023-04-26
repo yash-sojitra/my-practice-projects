@@ -19,7 +19,7 @@ int preOrder(struct node* root)
     }
 }
 
-int main(int argc, char const *argv[])
+int main()
 {
 
     struct node* root = (struct node*)malloc(sizeof(struct node));
