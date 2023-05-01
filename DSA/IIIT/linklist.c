@@ -14,7 +14,7 @@ void printList(node *n)
     while (n != NULL)
     {
 
-        printf("%d: %d\n",counter, n->data);
+        printf("%d: %d\n", counter, n->data);
         counter++;
         n = n->next;
     }
@@ -34,7 +34,7 @@ void createList(node *head, int n)
     }
 }
 
-node* pushAtFirst(node *head)
+node *pushAtFirst(node *head)
 {
     node *temp, *ptr;
     ptr = head;
@@ -66,7 +66,7 @@ void push(node *head)
     ptr->next = temp;
 }
 
-node* popFirst(node *head)
+node *popFirst(node *head)
 {
     head = head->next;
     return head;
@@ -122,17 +122,17 @@ int main()
             // scanf("%d", &temp->data);
             // temp->next = head;
             // head = temp;
-        break;
-    case 4:
-        pop(head);
-        break;
-    case 5:
-        head = popFirst(head);
-        break;
+            break;
+        case 4:
+            pop(head);
+            break;
+        case 5:
+            head = popFirst(head);
+            break;
+        }
+        if (choice == 6)
+            break;
     }
-    if (choice == 6)
-        break;
-}
-printList(head);
-return 0;
+    printList(head);
+    return 0;
 }
