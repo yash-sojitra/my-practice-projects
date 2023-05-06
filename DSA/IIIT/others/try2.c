@@ -2,7 +2,6 @@
 #include<stdlib.h>
 #include<conio.h>
 #define NULL 0
-
 struct node{
     int data;
     struct node * link;
