@@ -67,7 +67,7 @@ void traverse(stack *stack)
 int main()
 {
     stack *numbers;
-    numbers = (stack *)malloc(sizeof(stack));
+    numbers = malloc(sizeof(stack));
     numbers->capacity = 5;
     numbers->top = -1;
     numbers->array = (int *)malloc(sizeof(int) * numbers->capacity);

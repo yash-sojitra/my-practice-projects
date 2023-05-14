@@ -58,7 +58,7 @@ int main()
             }
             if (flag)
             {
-                printf("element '%d' is present at index no: ", value);
+                printf("element '%d' is present at index no: %d ", value, i);
             }
             else
             {
