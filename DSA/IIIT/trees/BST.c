@@ -85,19 +85,69 @@ void createBST(node *root, int num)
 
 void search(node *root, int val)
 {
-    if(root->data == val){
+    if (root->data == val)
+    {
         printf("'%d' is present in tree", val);
     }
     else if (root->data > val)
     {
-        search(root->left,val);
+        search(root->left, val);
     }
     else
     {
-        search(root->right,val);
+        search(root->right, val);
     }
-    
 }
+
+node *getSuccessor(node *curr){
+    curr=curr->right;
+    while(curr!=NULL && curr->left!=NULL)
+        curr=curr->left;
+    return curr;
+}
+
+node *delNode(node *root, int x)
+{
+
+    if (root == NULL)
+        return root;
+
+    if (root->data > x)
+        root->left = delNode(root->left, x);
+
+    else if (root->data < x)
+        root->right = delNode(root->right, x);\
+
+    else
+    {
+        if (root->left == NULL && root->right == NULL)
+            return NULL;
+
+        else if (root->left == NULL)
+        {
+            node *temp = root->right;
+            free(root);
+            return temp;
+        }
+
+        else if (root->right == NULL)
+        {
+            node *temp = root->left;
+            free(root);
+            return temp;
+        }
+        else
+        {
+            node *succ = getSuccessor(root);
+            root->data = succ->data;
+            root->right = delNode(root->right, succ->data);
+        }
+    }
+
+
+    return root;
+}
+
 
 int main()
 {
@@ -126,16 +176,19 @@ int main()
             addNode(root, temp);
             break;
         case 3:
-        
+            printf("\nenter a value to delete: \n");
+            scanf("%d", &val);
+            root = delNode(root, val);
             break;
         case 4:
             printf("\nenter a value to search: \n");
             scanf("%d", &val);
-            search(root,val);
+            search(root, val);
+            break;
+        case 5:
+            exit(0);
             break;
         }
-        if (choice == 5)
-            break;
     }
     return 0;
 }
