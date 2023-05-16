@@ -48,6 +48,6 @@ body {
 }
 
 .pressed {
-  box-shadow: 0 0 20px white;
-  background-color: grey;
+  box-shadow: 0 0 20px rgb(112, 112, 112);
+  /* background-color: grey; */
 }
