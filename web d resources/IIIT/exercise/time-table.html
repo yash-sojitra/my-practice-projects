@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time-table</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 97vh;
+        }
+        table{
+            box-align: center;
+            text-align: center;
+        }
+        table,td,th{
+          font-size: 13px;
+          font-family:Georgia, 'Times New Roman', Times, serif;
+          border: 1px solid black;
+          border-collapse:collapse;
+        }
+        td:hover{
+            background-color: rgba(0, 0, 0, 1);
+            color: white;
+        }
+        th{
+            background-color: rgb(143, 235, 122);;
+        }
+    </style>
+</head>
+<body>
+    <table width="95%" height="600px">
+        <tr style="height: 40px;font-size: 50px;">
+            <td colspan="10" style="text-align: center;font-size: 20px;"><img src="https://upload.wikimedia.org/wikipedia/en/5/52/IIIT_Surat_logo.jpg" alt="IIIT SURAT Emblem" style="width:40px;height:40px;float: left;padding-left: 10px;padding-right:50px">Indian Institute of Information Technology ,Surat<br>Semester 2 ECE </td>
+            <td colspan="2"><b>Classroom 5</b></td>
+        </tr>
+        <tr style="height: 20px;">
+            <th colspan="2" style="padding-left: 10px;"> </th>
+            <th colspan="2" style="padding-left: 50px;padding-right: 50px;">Monday</th>
+            <th colspan="2" style="padding-left: 50px;padding-right: 50px;">Tuesday</th>
+            <th colspan="2" style="padding-left: 50px;padding-right: 50px;">Wednesday</th>
+            <th colspan="2" style="padding-left: 50px;padding-right: 50px;">Thursday</th>
+            <th colspan="2" style="padding-left: 50px;padding-right: 50px;">Friday</th>
+        </tr>
+        <tr>
+            <td colspan="2">8:15-9:15</td>
+            <td colspan="2"></td>
+            <td colspan="2"></td>
+            <td colspan="2"></td>
+            <td colspan="2">IC<br>BW</td>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+            <td colspan="2">9:15-10:15</td>
+            <td colspan="2"></td>
+            <td colspan="2"></td>
+            <td colspan="2"></td>
+            <td colspan="2">IC<br>BW</td>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+            <td style="font-size:13px;" colspan="2"> 10:30 -11:30</td>
+            <td colspan="2" >CAO<br>SVR</td>
+            <td colspan="2">CAO<br>SVR</td>
+            <td colspan="2"></td>
+            <td colspan="2">DM<br>APS</td>
+            <td colspan="2">CAO<br>GA</td>
+        </tr>
+        <tr>
+            <td style="font-size:13px;" colspan="2"> 11:30-12:30</td>
+            <td colspan="1" rowspan="2" style="text-align:center;">ICT-II LAB<br>(A1)<br>GA/SN/L2<br></br>CSE 1</td>
+            <td colspan="1" rowspan="2" style="text-align:center;">DSA LAB<br>(A2)<br>DH/L1/L3<br></br>ECE 2</td>
+            <td colspan="2">DSA<br>RK</td>
+            <td colspan="2">EDS<br>SRS</td>
+            <td colspan="1" rowspan="2" style="text-align:center;">DSA LAB<br>(A1)<br>DH/L1/L3<br></br>ECE 2</td>
+            <td colspan="1" rowspan="2" style="text-align:center;">ICT-II LAB<br>(A2)<br>GA/SN/L2<br></br>CSE 1</td>
+            <td colspan="1" rowspan="2" style="text-align:center;">EDC LAB<br>(A1)<br>SRS/HG/SR<br></br>ECE 2</td>
+            <td colspan="1" rowspan="2" style="text-align:center;">ICT-II LAB<br>(A2)<br>GA/RP/L3<br></br>CSE 1</td>
+        </tr>
+        <tr>
+            <td colspan="2">12:30-1:30</td>
+            <td colspan="2">EDC<br>DP</td>
+            <td colspan="2">DSA<br>DH</td>
+        </tr>
+        <tr>
+            <td colspan="2">1:30-3:00</td>
+            <td colspan="12" style="text-align: center;"><i>LUNCH BREAK</i></td>
+        </tr>
+        <tr>
+            <td colspan="2">3:00-4:00</td>
+            <td colspan="2">DM<br>APS</td>
+            <td colspan="1" rowspan="2" style="text-align:center;">ICT-II LAB<br>(A1)<br>SVR/DP/GA<br></br>CSE 1</td>
+            <td colspan="1" rowspan="2" style="text-align:center;">EDC LAB<br>(A2)<br>TD/SRS/HG<br></br>ECE 2</td>
+            <td colspan="2">EDC<br>TD</td>
+            <td colspan="2"></td>
+            <td colspan="2">DM TUT<br>APS</td>
+        </tr>
+        <tr>
+            <td colspan="2">4:00-5:00</td>
+            <td colspan="2">EDC Tut<br>HG/TD/SR</td>
+            <td colspan="2">DM <br>APS</td>
+            <td colspan="2"></td>
+            <td colspan="2">DSA <br>RK</td>
+        </tr>
+    </table>
+</body>
+</html>
