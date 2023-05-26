@@ -1,0 +1,57 @@
+Git is a software, a command line tool which is installed locally on the system.
+GitHub is a web-based Git repository hosting service
+
+Download git website:
+
+https://git-scm.com/downloads
+
+git config --global user.name "My Name"
+git config --global user.email "myemail@example.com"
+
+Extra Useful Git command Lines
+
+1. git restore --staged <file name>
+(to restore the staged files (added files) to the unstaged area)
+
+2. git stash
+(to set the staged files on the backstage)
+
+3. git remote add origin <url>
+remote -> means you are working with the urls
+add -> means adding the url
+origin -> name of the url (default name -> origin)
+
+4. to change the head origin name from master to main
+
+git branch -m master main
+git fetch origin
+git branch -u origin/main main
+git remote set-head origin -a
+
+https://help.dreamhost.com/hc/en-us/articles/4466702078740-Configure-git-to-use-main-as-the-primary-branch
+
+5. To know how to delete branches and remote branches
+
+https://www.freecodecamp.org/news/git-delete-remote-branch/#:~:text=To%20completely%20remove%20a%20remote,origin%20%2Dd%20branch%2Dname%20.
+
+6. git branch -a (to list all branches)
+
+7. git branch -d <branch-name> (to delete a local branch)
+
+https://www.freecodecamp.org/news/git-branching-commands-explained/
+
+8. git push origin -d <branch-name> (to delete the remote branch) (the branch which is still there in Github)
+
+9. To push a remote branch.
+
+It means that you don't have your branch(the branch that you want to push) in your remote repository, in other words it does not exist in your remote repository(it wasn't created yet)... So use this Code:
+
+git push -u origin 'your branch name'
+
+This code will create your branch in your remote repository and will push it...
+
+Some Links to make the topic strong:
+
+https://www.freecodecamp.org/news/remote-branches-in-git/#:~:text=A%20remote%20branch%20exists%20in,remote%3E%20syntax.
+
+

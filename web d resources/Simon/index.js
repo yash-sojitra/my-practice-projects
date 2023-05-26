@@ -1,5 +1,8 @@
-
 var colors = ["green", "red", "yellow", "blue"];
+const redAudio = new Audio("./sounds/red.mp3");
+const greenAudio = new Audio("./sounds/green.mp3");
+const blueAudio = new Audio("./sounds/blue.mp3");
+const yellowAudio = new Audio("./sounds/yellow.mp3");
 
 $(document).keypress((e) => {
     if (e){
@@ -19,19 +22,15 @@ function makeSound(id) {
     animate(id);
     switch (id) {
         case "red":
-            const redAudio = new Audio("./sounds/red.mp3");
             redAudio.play();
             break;
         case "green":
-            const greenAudio = new Audio("./sounds/green.mp3");
             greenAudio.play();
             break;
         case "blue":
-            const blueAudio = new Audio("./sounds/blue.mp3");
             blueAudio.play();
             break;
         case "yellow":
-            const yellowAudio = new Audio("./sounds/yellow.mp3");
             yellowAudio.play();
             break;
         default:

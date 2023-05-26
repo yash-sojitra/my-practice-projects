@@ -93,7 +93,7 @@ void pop(node *head)
     printf("\nenter the node number which you want to delete:\n");
     scanf("%d", &n);
     ptr = head;
-    for (int i = 1; i < n - 1; i++)
+    for (int i = 1; i < n; i++)
     {
         ptr = ptr->next;
     }

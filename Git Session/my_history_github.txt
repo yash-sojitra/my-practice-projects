@@ -1,0 +1,93 @@
+FORKING 
+
+PS D:\Antri\Programs\Git & Github\forking repo\001-repo> git remote -v
+origin  https://github.com/Antriksh1305/001-repo.git (fetch)
+origin  https://github.com/Antriksh1305/001-repo.git (push)
+PS D:\Antri\Programs\Git & Github\forking repo\001-repo> git remote add upstream https://github.com/Antriksh-001/001-repo.git
+PS D:\Antri\Programs\Git & Github\forking repo\001-repo> git remote -v
+origin  https://github.com/Antriksh1305/001-repo.git (fetch)
+origin  https://github.com/Antriksh1305/001-repo.git (push)
+upstream        https://github.com/Antriksh-001/001-repo.git (fetch)
+upstream        https://github.com/Antriksh-001/001-repo.git (push)
+PS D:\Antri\Programs\Git & Github\forking repo\001-repo> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS D:\Antri\Programs\Git & Github\forking repo\001-repo> git checkout -b antriksh
+Switched to a new branch 'antriksh'
+PS D:\Antri\Programs\Git & Github\forking repo\001-repo> git add .
+PS D:\Antri\Programs\Git & Github\forking repo\001-repo> git commit -m "new mssg added"
+[antriksh dde4863] new mssg added
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+PS D:\Antri\Programs\Git & Github\forking repo\001-repo> git log
+commit dde486344eeda1ada4904750dd64ecf0d05d4370 (HEAD -> antriksh)
+Author: Antriksh Gupta <Antrikshgupta01@gmail.com>
+Date:   Fri Mar 31 11:42:00 2023 +0530
+
+    new mssg added
+
+commit 70ca8acef5ca1e9c1bd78bd7953f6c902f5c706c (origin/main, origin/HEAD, main)
+Author: Antriksh-001 <128877265+Antriksh-001@users.noreply.github.com>
+Date:   Fri Mar 31 11:00:13 2023 +0530
+
+    Initial commit
+PS D:\Antri\Programs\Git & Github\forking repo\001-repo> git push origin antriksh
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 286 bytes | 286.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'antriksh' on GitHub by visiting:
+remote:      https://github.com/Antriksh1305/001-repo/pull/new/antriksh
+remote:
+To https://github.com/Antriksh1305/001-repo.git
+ * [new branch]      antriksh -> antriksh
+PS D:\Antri\Programs\Git & Github\forking repo\001-repo> git add .
+PS D:\Antri\Programs\Git & Github\forking repo\001-repo> git commit -m "first.txt"
+[antriksh 6529bf5] first.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 first.txt
+PS D:\Antri\Programs\Git & Github\forking repo\001-repo> git push origin antriksh
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 279 bytes | 279.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Antriksh1305/001-repo.git
+   dde4863..6529bf5  antriksh -> antriksh
+PS D:\Antri\Programs\Git & Github\forking repo\001-repo> git log
+commit 6529bf5a600b50279d1022a9aae242a836c94fc2 (HEAD -> antriksh, origin/antriksh)
+Author: Antriksh Gupta <Antrikshgupta01@gmail.com>
+Date:   Fri Mar 31 11:49:03 2023 +0530
+
+    first.txt
+
+commit dde486344eeda1ada4904750dd64ecf0d05d4370
+Author: Antriksh Gupta <Antrikshgupta01@gmail.com>
+Date:   Fri Mar 31 11:42:00 2023 +0530
+
+    new mssg added
+
+commit 70ca8acef5ca1e9c1bd78bd7953f6c902f5c706c (origin/main, origin/HEAD, main)
+Author: Antriksh-001 <128877265+Antriksh-001@users.noreply.github.com>
+Date:   Fri Mar 31 11:00:13 2023 +0530
+PS D:\Antri\Programs\Git & Github\forking repo\001-repo> git reset 6529bf5a600b50279d1022a9aae242a836c94fc2
+PS D:\Antri\Programs\Git & Github\forking repo\001-repo> git reset dde486344eeda1ada4904750dd64ecf0d05d4370
+PS D:\Antri\Programs\Git & Github\forking repo\001-repo> git add .
+PS D:\Antri\Programs\Git & Github\forking repo\001-repo> git stash       
+Saved working directory and index state WIP on antriksh: dde4863 new mssg added
+PS D:\Antri\Programs\Git & Github\forking repo\001-repo> git stash clear
+PS D:\Antri\Programs\Git & Github\forking repo\001-repo> git push origin main -f
+Everything up-to-date
+PS D:\Antri\Programs\Git & Github\forking repo\001-repo> git push origin antriksh -f
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Antriksh1305/001-repo.git
+ + 6529bf5...dde4863 antriksh -> antriksh (forced update)
+PS D:\Antri\Programs\Git & Github\forking repo\001-repo> 

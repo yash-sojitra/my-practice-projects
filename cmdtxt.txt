@@ -1,0 +1,17 @@
+ls
+
+mkdir
+
+cd
+
+cd ..
+
+cat <file name>
+
+cat > <file name>
+
+pwd
+
+whoami
+
+rm
