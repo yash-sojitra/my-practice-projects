@@ -68,6 +68,19 @@ void push(node *head)
     temp->previous = ptr;
 }
 
+void pushAtLast(node *head)
+{
+    node *ptr = head;
+    while (ptr->next != NULL)
+        ptr = ptr->next;
+    node *temp = (node *)malloc(sizeof(node));
+    printf("\nenter the data of new node: \n");
+    scanf("%d", &temp->data);
+    temp->next = NULL;
+    temp->previous = ptr;
+    ptr->next = temp;
+}
+
 node *popFirst(node *head)
 {
     head = head->next;
@@ -95,6 +108,16 @@ void pop(node *head)
     free(ptr2->next);
     free(ptr2);
 }
+
+void popLast(node* head)
+{
+    node *ptr = head;
+    while (ptr->next->next != NULL)
+        ptr = ptr->next;
+    free(ptr->next);
+    ptr->next = NULL;
+}
+
 int main()
 {
     int n;
@@ -110,7 +133,7 @@ int main()
     while (1)
     {
         int choice;
-        printf("\n-->list operations\n\n1. traversal\n2. insertion\n3. insertion at first\n4. deletion\n5. deletion at First\n6. exit\n\nenter choice--> ");
+        printf("\n-->list operations\n\n1. traversal\n2. insertion\n3. insertion at first\n4. insertion at last\n5. deletion\n6. deletion at First\n7. deletion at last\n8. exit\n\nenter choice--> ");
         scanf("%d", &choice);
         switch (choice)
         {
@@ -122,14 +145,21 @@ int main()
             break;
         case 3:
             head = pushAtFirst(head);
+            break;
         case 4:
-            pop(head);
+            pushAtLast(head);
             break;
         case 5:
+            pop(head);
+            break;
+        case 6:
             head = popFirst(head);
             break;
+        case 7:
+            popLast(head);
+            break;
         }
-        if (choice == 6)
+        if (choice == 8)
             break;
     }
     printList(head);

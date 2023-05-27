@@ -21,7 +21,7 @@ void printList(node *head)
     }
 }
 
-node *insertFirst(node *head){
+node *pushAtFirst(node *head){
 
     node* prev  = head->next;
 
@@ -127,7 +127,7 @@ int main()
     while (1)
     {
         int choice;
-        printf("\n-->list operations\n\n1. traversal\n2. insertion\n3. insertion at first\n4. deletion\n5. deletion at First\n6. exit\n\nenter choice--> ");
+        printf("\n-->list operations\n\n1. traversal\n2. insertion\n3. insertion at first\n4. insertion at last\n5. deletion\n6. deletion at First\n7. deletion at last\n8. exit\n\nenter choice--> ");
         scanf("%d", &choice);
         switch (choice)
         {
@@ -138,16 +138,22 @@ int main()
             push(head);
             break;
         case 3:
-            head = insertFirst(head);
+            head = pushAtFirst(head);
             break;
-        case 4:
+        // case 4:
+        //     pushAtLast(head);
+        //     break;
+        case 5:
             pop(head);
             break;
-        case 5:
+        case 6:
             head = popFirst(head);
             break;
+        // case 7:
+        //     popLast(head);
+        //     break;
         }
-        if (choice == 6)
+        if (choice == 8)
             break;
     }
 
