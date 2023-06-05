@@ -1,47 +1,16 @@
-var colors = ["green", "red", "yellow", "blue"];
-const redAudio = new Audio("./sounds/red.mp3");
-const greenAudio = new Audio("./sounds/green.mp3");
-const blueAudio = new Audio("./sounds/blue.mp3");
-const yellowAudio = new Audio("./sounds/yellow.mp3");
+var buttonColors = ["green", "red", "yellow", "blue"];
+var gamePattern = [];
+var userCLickedPattern = [];
 
-$(document).keypress((e) => {
-    if (e){
-        startGame()
-    }
-})
+function nextSequence() {
+    
+    var randomNumber = Math.floor(Math.random() * 4);
+    var randomChosenColor = buttonColors[randomNumber];
+    gamePattern.push(randomChosenColor);
 
-function startGame(){
+    $('#'+ randomChosenColor).fadeIn(100).fadeOut(100).fadeIn(100);
 
+    var audio = new  Audio("./sounds/"+randomChosenColor+".mp3");
+    audio.play();
 }
 
-$(".btn").click(function (event) {
-    makeSound(event.target.id);
-});
-
-function makeSound(id) {
-    animate(id);
-    switch (id) {
-        case "red":
-            redAudio.play();
-            break;
-        case "green":
-            greenAudio.play();
-            break;
-        case "blue":
-            blueAudio.play();
-            break;
-        case "yellow":
-            yellowAudio.play();
-            break;
-        default:
-            break;
-    }
-}
-
-function animate(id) {
-    $("#"+id).addClass("pressed");
-
-    setTimeout(function(){
-        $("#"+id).removeClass("pressed");
-    },100)
-}

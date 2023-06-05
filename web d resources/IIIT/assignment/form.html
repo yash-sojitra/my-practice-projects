@@ -6,20 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    body{
+        font-size: 1.2rem;
+    }
+    .input-area{
+        padding:1% 0%;
+    }
+    #btn{
+        padding: 10px 20px;
+        border-radius: 5px;
+        color: white;
+        background-color: black;
+    }
+    .input-area input{
+        width: 15vw;
+        padding: 5px 0;
+    }
+    #myfile{
+        padding: 20px 10px;
+    }
+</style>
 <body>
     <h1>Job Recruitment</h1>
     <form action="" method="post">
-        <label for="name">Enter your name</label><br>
-        <input name="name" class="name" type="text"><br>
+        <div class="input-area">
+            <label for="name">Enter your name</label><br>
+            <input name="name" class="name" type="text"><br>
+        </div>
 
-        <label for="name">Enter your father's name</label><br>
-        <input name="name" class="name" type="text"><br>
+        <div class="input-area">
+            <label for="fname">Enter your father's name</label><br>
+            <input name="fname" class="fname name" type="text"><br>
+        </div>
 
-        <label for="name">Enter your Mother's name</label><br>
-        <input name="name" class="name" type="text"><br>
+        <div class="input-area">
+            <label for="mname">Enter your Mother's name</label><br>
+            <input name="mname" class="mname name" type="text"><br>
+        </div>
 
-        <label for="name">Enter your age</label><br>
-        <input name="name" class="name" type="text"><br>
+        <div class="input-area">
+            <label for="age">Enter your age</label><br>
+            <input name="age" class="age name" type="text"><br>
+        </div>
+        
+        <div class="input-area">
+            <label for="file">Upload your resume</label><br>
+            <input  type="file" name="myfile" id="myfile"><br>
+        </div>
+
+        <input id="btn" type="button" value="submit">
     </form>
 </body>
 </html>

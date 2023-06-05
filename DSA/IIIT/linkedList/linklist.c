@@ -6,6 +6,7 @@ struct Node
     int data;
     struct Node *next;
 };
+
 typedef struct Node node;
 void printList(node *n)
 {
@@ -79,8 +80,10 @@ void pushAtLast(node *head)
 }
 
 node *popFirst(node *head)
-{
+{   
+    node* ptr = head;
     head = head->next;
+    free(ptr);
     return head;
 }
 

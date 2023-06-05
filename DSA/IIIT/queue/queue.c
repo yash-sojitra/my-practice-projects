@@ -9,18 +9,17 @@ typedef struct queue
     int *array;
 } queue;
 
-queue* createQueue()
+queue* createQueue(int n)
 {
     queue* Q = malloc(sizeof(queue));
-    printf("enter length of queue");
-    scanf("%d",&Q->capacity);
-    Q->array = malloc(sizeof(int)*Q->capacity);
+    Q->capacity = n;
+    Q->array = malloc(sizeof(int)*n);
     Q->front = -1;
     Q->rear = -1;
     return Q;
 }
 
-void isEmpty(queue* Q)
+int isEmpty(queue* Q)
 {
     if (Q->front == -1 && Q->rear == -1)
         return 1;
@@ -34,26 +33,76 @@ int isFull(queue* Q)
     return 0;
 }
 
-void enQueue(queue* Q)
+void enQueue(queue* Q, int n)
 {
     if (isFull(Q)){
-        printf("<-- Queue is full -->");
+        printf("\n<-- Queue is full -->\n");
         return;
     }
     Q->rear++;
-    printf("enter data:\n");
-    scanf("%d",&Q );
-    if (Q->front)
+    if (Q->front == -1)
     {
-        Q->front == Q->rear;
+        Q->front = Q->rear;
     }
-    
+    Q->array[Q->rear] = n;
+}
 
+int deQueue(queue* Q)
+{
+    int data = -1;
+    if (isEmpty(Q))
+    {
+        printf("\n<-- Queue is empty -->\n");
+    }
+    else{
+        data = Q->array[Q->front];
+        if(Q->front == Q->rear == 0)
+        {
+            Q->front = Q->rear = -1;
+        }
+        else
+        {
+            Q->front++;
+        }
+    }
+    return data;
+}
+
+int queueSize(queue* Q)
+{
+    return ((Q->capacity - Q->front + Q->rear + 1)% Q->capacity);
+}
+
+
+void printQueue(queue* Q)
+{
+    for (int i = Q->front; i <= Q->rear; i++)
+    {
+        printf("%d. %d\n",i,Q->array[i]);
+    }  
 }
 
 int main()
-{
-    queue* numbers = createQueue();
+{   
+    int n;
+    printf("enter length of queue:\n");
+    scanf("%d",&n);
+    queue* numbers = createQueue(n);
 
+    enQueue(numbers,5);
+    enQueue(numbers,7);
+    enQueue(numbers,9);
+    enQueue(numbers,7);
+    enQueue(numbers,9);
+    enQueue(numbers,7);
+    enQueue(numbers,5);
+
+    printQueue(numbers);
+
+    deQueue(numbers);
+    deQueue(numbers);
+    deQueue(numbers);
+
+    printQueue(numbers);
     return 0;
 }
