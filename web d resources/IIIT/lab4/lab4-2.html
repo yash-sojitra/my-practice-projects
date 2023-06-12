@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Javascript</title>
+</head>
+<body>
+    <h1 id="head">not my first javascript</h1>
+    <div id="date"></div>
+    <button onclick="dispDate()">click to reveal date</button>
+    <script>
+        const div = document.getElementById("date");
+        const h1 = document.getElementById("head");
+        function dispDate()
+        {
+            div.innerText = Date();
+        }
+            h1.style.color = "red";
+    </script>
+    <noscript>Sorry, your browser does not support JavaScript!</noscript>
+</body>
+</html>
+

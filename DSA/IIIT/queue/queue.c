@@ -40,7 +40,11 @@ void enQueue(queue* Q, int n)
         return;
     }
     Q->rear++;
-    if (Q->front == -1)
+    if (Q->rear == Q->capacity -1)
+    {
+        Q->rear = 0;
+    }
+    else if (Q->front == -1)
     {
         Q->front = Q->rear;
     }
@@ -56,7 +60,11 @@ int deQueue(queue* Q)
     }
     else{
         data = Q->array[Q->front];
-        if(Q->front == Q->rear == 0)
+        if (Q->front = Q->capacity -1)
+        {
+            Q->front = 0;
+        }
+        else if(Q->front == 0 || Q->rear == 0)
         {
             Q->front = Q->rear = -1;
         }
