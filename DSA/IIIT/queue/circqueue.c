@@ -62,10 +62,10 @@ int dequeue(cQueue *Q)
         return 0;
     }
     data = Q->array[Q->front];
-    if (Q->front == 0 || Q->rear == 0)
+    if (Q->front == Q->rear)
     {
-        Q->front--;
-        Q->rear--;
+        Q->front = -1;
+        Q->rear = -1;
     }
     else
     {
@@ -82,12 +82,12 @@ void traverse(cQueue *Q)
         return;
     }
     int i = Q->front;
-    printf("Elements in the circular queue: \n");
-    while (i != Q->rear+1)
+    while(i != Q->rear)
     {
-        printf("%d ", Q->array[i]);
-        i = (i + 1) % Q->capacity;
+        printf("%d. %d\n",i,Q->array[i]);
+        i = (i +1)%Q->capacity;
     }
+    printf("%d. %d\n",i,Q->array[i]);
 }
 
 int main()
