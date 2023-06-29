@@ -33,40 +33,34 @@ int isFull(queue* Q)
     return 0;
 }
 
-void enQueue(queue* Q, int n)
+void enQueue(queue* Q, int data)
 {
     if (isFull(Q)){
         printf("\n<-- Queue is full -->\n");
         return;
     }
     Q->rear++;
-    if (Q->rear == Q->capacity -1)
-    {
-        Q->rear = 0;
-    }
-    else if (Q->front == -1)
+    if (Q->front == -1)
     {
         Q->front = Q->rear;
     }
-    Q->array[Q->rear] = n;
+    Q->array[Q->rear] = data;
 }
 
 int deQueue(queue* Q)
 {
-    int data = -1;
+    int data;
     if (isEmpty(Q))
     {
         printf("\n<-- Queue is empty -->\n");
+        return 0;
     }
     else{
         data = Q->array[Q->front];
-        if (Q->front = Q->capacity -1)
+        if(Q->front == 0 && Q->rear == 0)
         {
-            Q->front = 0;
-        }
-        else if(Q->front == 0 || Q->rear == 0)
-        {
-            Q->front = Q->rear = -1;
+            Q->front = -1;
+            Q->rear = -1;
         }
         else
         {
@@ -84,6 +78,11 @@ int queueSize(queue* Q)
 
 void printQueue(queue* Q)
 {
+    if(isEmpty(Q))
+    {
+        printf("\n<---Queue is Empty--->");
+        return;
+    }
     for (int i = Q->front; i <= Q->rear; i++)
     {
         printf("%d. %d\n",i,Q->array[i]);
@@ -97,20 +96,27 @@ int main()
     scanf("%d",&n);
     queue* numbers = createQueue(n);
 
-    enQueue(numbers,5);
-    enQueue(numbers,7);
-    enQueue(numbers,9);
-    enQueue(numbers,7);
-    enQueue(numbers,9);
-    enQueue(numbers,7);
-    enQueue(numbers,5);
-
-    printQueue(numbers);
-
-    deQueue(numbers);
-    deQueue(numbers);
-    deQueue(numbers);
-
-    printQueue(numbers);
-    return 0;
+    while (1)
+    {
+        int data;
+        int choice;
+        printf("\n-->queue operations\n\n1. traversal\n2. enqueue\n3. dequeue\n\nenter choice--> ");
+        scanf("%d", &choice);
+        switch (choice)
+        {
+        case 1:
+            printQueue(numbers);
+            break;
+        case 2:
+            printf("enter data: \n");
+            scanf("%d",&data);
+            enQueue(numbers, data);
+            break;
+        case 3:
+            printf("%d removed !",deQueue(numbers));
+            break;
+        if (choice == 4)
+                break;
+        }
+    }
 }

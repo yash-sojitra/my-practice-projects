@@ -57,30 +57,21 @@ int height(node* root)
     return level - 1;
 }
 
-void addNode(node *root, node *temp)
+node *addNode(node *root, int data)
 {
-    if (temp->data > root->data)
+    if (root == NULL)
     {
-        if (root->right == NULL)
-        {
-            root->right = temp;
-        }
-        else
-        {
-            addNode(root->right, temp);
-        }
+        return createNode(data);
     }
-    else
+    else if (data>root->data)
     {
-        if (root->left == NULL)
-        {
-            root->left = temp;
-        }
-        else
-        {
-            addNode(root->left, temp);
-        }
+        root->right = addNode(root->right,data);
     }
+    else if (data<root->data)
+    {
+        root->left = addNode(root->left,data);
+    }
+    return root;
 }
 
 node *createNode(int value)
@@ -97,8 +88,7 @@ void createBST(node *root, int num)
     {
         int n;
         scanf("%d", &n);
-        node *temp = createNode(n);
-        addNode(root, temp);
+        root = addNode(root, n);
     }
 }
 
