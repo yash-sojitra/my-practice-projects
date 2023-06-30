@@ -113,7 +113,7 @@ int main()
             enQueue(numbers, data);
             break;
         case 3:
-            printf("%d removed !",deQueue(numbers));
+            deQueue(numbers);
             break;
         if (choice == 4)
                 break;

@@ -8,6 +8,14 @@ typedef struct node
     struct node *right;
 } node;
 
+node *createNode(int value)
+{
+    node *temp = malloc(sizeof(node));
+    temp->data = value;
+    temp->left = NULL;
+    temp->right = NULL;
+}
+
 void printTabs(int level)
 {
     for (int i = 0; i < level; i++)
@@ -72,14 +80,6 @@ node *addNode(node *root, int data)
         root->left = addNode(root->left,data);
     }
     return root;
-}
-
-node *createNode(int value)
-{
-    node *temp = malloc(sizeof(node));
-    temp->data = value;
-    temp->left = NULL;
-    temp->right = NULL;
 }
 
 void createBST(node *root, int num)

@@ -1,119 +1,137 @@
 #include <stdio.h>
-#include <stdlib.h>
 
-struct node{
-    int data;
-    struct node*next;
-};
-struct stack{
-    int top;
-    int capacity;
-    struct node*head;
-};
-struct stack* creatstack(int cap){
-    struct stack* stack;
-    stack=malloc(sizeof(struct stack));
-    stack->capacity=cap;
-    stack->top=-1;
-    stack->head->data=0;
-    stack->head->next=NULL;
-    struct node*ptr;
-    ptr=stack->head;
-    for(int i=1;i<cap;i++){
-        struct node*temp;
-        temp=malloc(sizeof(struct node*));
-        temp->data=0;
-        temp->next=NULL;
-        ptr->next=temp;
-        ptr=ptr->next;
-    }
-    return stack;
+void swap(int *a, int *b)
+{
+    int temp = *a;
+    *a = *b;
+    *b = temp;
 }
-int isFull(struct stack*s){
-    if(s->top==s->capacity-1)
-        return 1;
-    else    
-        return 0;
-}
-int isEmpty(struct stack*s){
-    if(s->top==-1)
-        return 1;
-    else    
-        return 0;
-}
-int pushin(struct stack*s,int value){
-    if(isFull(s))
-        printf("stack is already full.");
-    else{
-        struct node*ptr;
-        ptr=s->head;
-        for(int i=1;i<=s->top;i++)
-            ptr=ptr->next;
-        ptr->next->data=value;
-        s->top++;
 
-    }
-}
-int popout(struct stack*s){
-    if(isEmpty(s))
-        printf("stack is alredy empty.");
-    else{
-        struct node*ptr;
-        ptr=s->head;
-        for(int i=1;i<s->top;i++)
-            ptr=ptr->next;
-        int c=ptr->next->data;
-        printf("\n%d is pop out.\n",c);
-        ptr->next->data=0;
-        s->top--;
-    }
-}
-int display(struct stack*s){
-    struct node*ptr=s->head;
-    int a=s->top;
-    printf("\nstack is:-");
-    for(int i=s->top;i>=0;i--){
-        struct node*ptr1=ptr;
-        for(int j=0;j<=a;j++)
-            ptr1=ptr1->next;
-        printf("\n%d->%d",i,ptr1->data);
-    }
-}
-int main(){
-    int cap;
-    printf("enter value of capacity of stack:");
-    scanf("%d",&cap);
-    struct stack* stack;
-    stack=creatstack(cap);
-    int item;
-    while(1){
-        int choice;
-        display(stack);
-        printf("\nlist of operations:\n1.isFull\n2.isEmpty\n3.pop out\n4.push in\n5.exit\n");
-        scanf("%d",&choice);
-        switch (choice){
-            case 1:
-                if(isFull(stack))
-                    printf("stack is full.");
-                else if(!isFull(stack))   
-                    printf("stack isn't full.");
-                break;
-            case 2:
-                if(isEmpty(stack))
-                    printf("stack is empty.");
-                else if(!isEmpty(stack))  
-                    printf("stack is not empty.");
-                break;
-            case 3:
-                popout(stack);
-                break;
-            case 4:
-                printf("enter value:");
-                scanf("%d",&item);
-                pushin(stack,item);
-                break;
+void bubble_sort(int arr[], int n)
+{
+    for (int i = 0; i < n - 1; i++)
+    {
+        for (int j = 0; j < n - i - 1; j++)
+        {
+            if (arr[j] > arr[j + 1])
+            {
+                swap(&arr[j], &arr[j + 1]);
+            }
         }
-        if(choice == 5)
-            break;
     }
+}
+
+void insertion_sort(int arr[], int n)
+{
+    int i, key, j;
+    for (i = 1; i < n; i++)
+    {
+        key = arr[i];
+        j = i - 1;
+
+        while (j >= 0 && arr[j] > key)
+        {
+            arr[j + 1] = arr[j];
+            j = j - 1;
+        }
+        arr[j + 1] = key;
+    }
+}
+
+void heapify(int arr[], int n, int i)
+{
+    int largest = i;
+    int l = 2 * i + 1;
+    int r = 2 * i + 2;
+
+    if (l < n && arr[l] > arr[largest])
+    {
+        largest = l;
+    }
+
+    if (r < n && arr[r] > arr[largest])
+    {
+        largest = r;
+    }
+
+    if (largest != i)
+    {
+        swap(&arr[i], &arr[largest]);
+        heapify(arr, n, largest);
+    }
+}
+
+void heap_sort(int arr[], int n)
+{
+    for (int i = n / 2 - 1; i >= 0; i--)
+    {
+        heapify(arr, n, i);
+    }
+
+    for (int i = n - 1; i > 0; i--)
+    {
+        swap(&arr[0], &arr[i]);
+        heapify(arr, i, 0);
+    }
+}
+
+void print_array(int arr[], int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+}
+
+int main()
+{
+    int arr[100];
+    int n;
+    int choice;
+
+    printf("Enter the number of elements: ");
+    scanf("%d", &n);
+
+    printf("Enter the elements:\n");
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+
+    printf("Original array: ");
+    print_array(arr, n);
+
+    printf("Choose sorting algorithm:\n");
+    printf("1. Bubble Sort\n");
+    printf("2. Insertion Sort\n");
+    printf("3. Heap Sort\n");
+    scanf("%d", &choice);
+
+    do
+    {
+        switch (choice)
+        {
+        case 1:
+            bubble_sort(arr, n);
+            printf("Bubble sorted array: ");
+            print_array(arr, n);
+            break;
+        case 2:
+            insertion_sort(arr, n);
+            printf("Insertion sorted array: ");
+            print_array(arr, n);
+            break;
+        case 3:
+            heap_sort(arr, n);
+            printf("Heap sorted array: ");
+            print_array(arr, n);
+            break;
+        default:
+            printf("Invalid choice\n");
+            break;
+        }   
+    }while (choice != 3);
+
+    return 0;
 }

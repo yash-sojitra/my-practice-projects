@@ -113,12 +113,11 @@ void createList(node *head, int n)
 }
 
 int main()
-{  
+{
     int n;
     printf("enter length of circular linked list: \n");
     scanf("%d", &n);
-    node *head = NULL;
-    head = (node *)malloc(sizeof(node));
+    node *head = (node *)malloc(sizeof(node));
     printf("enter data of linked list: \n");
     scanf("%d", &head->data);
     head->next = NULL;

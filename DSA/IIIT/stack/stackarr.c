@@ -68,7 +68,8 @@ int main()
 {
     stack *numbers;
     numbers = malloc(sizeof(stack));
-    numbers->capacity = 5;
+    printf("enter size of stack: \n");
+    scanf("%d",&numbers->capacity);
     numbers->top = -1;
     numbers->array = (int *)malloc(sizeof(int) * numbers->capacity);
 
@@ -83,7 +84,7 @@ int main()
             traverse(numbers);
             break;
         case 2:
-            printf("enter the data you eant to push: \n");
+            printf("enter the data you want to push: \n");
             scanf("%d", &data);
             push(numbers, data);
             break;
