@@ -1,30 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-struct Node
-{
+struct Node{
     int data;
     struct Node *next;
 };
 typedef struct Node node;
-  
-node *createQueue(int data)
-{
+node *createQueue(int data){
     node *temp = malloc(sizeof(node));
     temp->data = data;
     temp->next = NULL;
 }
-
-node *dequeue(node *head)
-{   
+node *dequeue(node *head){   
     node* ptr = head;
     head = head->next;
     free(ptr);
     return head;
 }
-
-void enqueue(node *head)
-{
+void enqueue(node *head){
     node *ptr = head;
     while (ptr->next != NULL)
         ptr = ptr->next;
@@ -34,34 +26,26 @@ void enqueue(node *head)
     temp->next = NULL;
     ptr->next = temp;
 }
-
-void printQueue(node *n)
-{
+void printQueue(node *n){
     printf("\nthe linked list is:\n");
     int counter = 1;
-    while (n != NULL)
-    {
-
+    while (n != NULL){
         printf("%d: %d\n", counter, n->data);
         counter++;
         n = n->next;
     }
 }
-
-int main()
-{
-
+int main(){
     int data;
     printf("enter first element of queue");
     scanf("%d",&data);
     node *queue = createQueue(data);
-    while (1)
-    {
+    printf("\n-->list operations\n\n1. traversal\n2. enqueue\n3. dequeue\n");
+    while (1){
         int choice;
-        printf("\n-->list operations\n\n1. traversal\n2. enqueue\n3. dequeue\n\nenter choice-->");
+        printf("\nenter choice-->");
         scanf("%d", &choice);
-        switch (choice)
-        {
+        switch (choice){
         case 1:
             printQueue(queue);
             break;

@@ -1,46 +1,33 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-typedef struct circQueue
-{
+typedef struct circQueue{
     int capacity;
     int front;
     int rear;
     int *array;
 } cQueue;
-
-cQueue *createQueue(int cap)
-{
+cQueue *createQueue(int cap){
     cQueue *temp = malloc(sizeof(cQueue));
     temp->capacity = cap;
     temp->front = temp->rear = -1;
     temp->array = malloc(sizeof(int) * temp->capacity);
     return temp;
 }
-
-int isEmpty(cQueue *Q)
-{
+int isEmpty(cQueue *Q){
     if (Q->front == -1 || Q->rear == -1)
         return 1;
     return 0;
 }
-
-int size(cQueue *Q)
-{
+int size(cQueue *Q){
     return Q->front < Q->rear ? Q->rear - Q->front + 1 : Q->capacity - Q->front + Q->rear + 1;
 }
-
-int isFull(cQueue *Q)
-{
+int isFull(cQueue *Q){
     if (size(Q) == Q->capacity)
         return 1;
     return 0;
 }
-
-void enqueue(cQueue *Q)
-{
-    if (isFull(Q))
-    {
+void enqueue(cQueue *Q){
+    if (isFull(Q)){
         printf("!!! Queue is Full !!!");
         return;
     }
@@ -52,59 +39,45 @@ void enqueue(cQueue *Q)
         Q->front++;
     Q->array[Q->rear] = data;
 }
-
-int dequeue(cQueue *Q)
-{
+int dequeue(cQueue *Q){
     int data = -1;
-    if (isEmpty(Q))
-    {
+    if (isEmpty(Q)){
         printf("!!! Queue is Empty !!!");
         return 0;
     }
     data = Q->array[Q->front];
-    if (Q->front == Q->rear)
-    {
+    if (Q->front == Q->rear){
         Q->front = -1;
         Q->rear = -1;
     }
     else
-    {
         Q->front = (Q->front + 1) % Q->capacity;
-    }
     return data;
 }
-
-void traverse(cQueue *Q)
-{
-    if (isEmpty(Q))
-    {
+void traverse(cQueue *Q){
+    if (isEmpty(Q)){
         printf("Circular queue is empty.\n");
         return;
     }
     int i = Q->front;
-    while(i != Q->rear)
-    {
+    while(i != Q->rear){
         printf("%d. %d\n",i,Q->array[i]);
         i = (i +1)%Q->capacity;
     }
     printf("%d. %d\n",i,Q->array[i]);
 }
-
-int main()
-{
+int main(){
     int n;
     printf("enter length of queue: \n");
     scanf("%d", &n);
     cQueue *Q = createQueue(n);
     printf("!!Queue Created!!");
-
-    while (1)
-    {
+    printf("\n-->queue operations\n\n1. traversal\n2. enqueue\n3. dequeue\n");
+    while (1){
         int choice;
-        printf("\n-->queue operations\n\n1. traversal\n2. enqueue\n3. dequeue\n\nenter choice--> ");
+        printf("\nenter choice--> ");
         scanf("%d", &choice);
-        switch (choice)
-        {
+        switch (choice){
         case 1:
             traverse(Q);
             break;
@@ -114,7 +87,6 @@ int main()
         case 3:
             dequeue(Q);
             break;
-
             if (choice == 4)
                 break;
         }

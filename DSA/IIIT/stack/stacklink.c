@@ -1,46 +1,30 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-struct Node
-{
+struct Node{
     int data;
     struct Node *next;
 };
-
 typedef struct Node node;
-
-struct Stack
-{
+struct Stack{
     node* top;
 };
-
 typedef struct Stack stack;
-
-
-int isEmpty(stack *stack)
-{
+int isEmpty(stack *stack){
     if (stack->top == NULL)
         return 1;
     return 0;
 }
-
-void pop(stack* stack)
-{   
-    if (isEmpty(stack))
-    {
+void pop(stack* stack){ 
+    if (isEmpty(stack)){
         printf("\nStack is empty\n");
         return;
-    }
-    else
-    {
+    }else{
     node* ptr = stack->top;
     stack->top = stack->top->next;
     free(ptr);
     }
 }
-
-void push(stack* stack)
-{
+void push(stack* stack){
     node *temp, *ptr;
     ptr = stack->top;
     temp = (node *)malloc(sizeof(node));
@@ -50,35 +34,29 @@ void push(stack* stack)
     ptr = temp;
     stack->top = ptr;
 }
-
-stack* createStack()
-{
+stack* createStack(){
     stack* temp = malloc(sizeof(stack));
     temp->top = NULL;
     return temp;
 }
-
-void traverse(stack* stack)
-{
+void traverse(stack* stack){
     node* ptr = stack->top;
-    while (ptr)
-    {
+        if (ptr == NULL){
+            printf("!!empty!!");
+            return;
+        }    
+    while (ptr){
         printf("%d\n",ptr->data);
         ptr = ptr->next;
     }
 }
-
-int main()
-{
+int main(){
     stack* numbers = createStack();
-
-    while (1)
-    {
-        int choice, data;
-        printf("\n-->stack operations\n\n1. traversal\n2. push\n3. pop\n4. exit\n\nenter choice--> ");
+    printf("\n-->stack operations\n\n1. traversal\n2. push\n3. pop\n4. exit\n");
+    while (1){
+        int choice, data;printf("\nenter choice--> ");
         scanf("%d", &choice);
-        switch (choice)
-        {
+        switch (choice){
         case 1:
             traverse(numbers);
             break;

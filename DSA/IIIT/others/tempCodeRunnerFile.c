@@ -8,11 +8,10 @@ int main(){
     printf("enter elements of array: ");
     for (int i = 0; i < n; i++)
         scanf("%d", &ptr[i]);
-    printf("\n\n-->Update Operations\n\n1.Insert\n2.Delete\n3.Update\n4.Search\n5.Traverse\n6.Exit\n\n");
     while (1){
         int choice;
-        printf("choice--> ");
         int index;
+        printf("\n\n-->Update Operations\n\n1.Insert\n2.Delete\n3.Update\n4.Search\n5.Traverse\n6.Exit\n\n");
         scanf("%d", &choice);
         switch (choice){
         case 1:
