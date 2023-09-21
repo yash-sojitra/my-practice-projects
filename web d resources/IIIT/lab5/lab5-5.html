@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>form attributes</h1>
+        <form action="submit-form.php" method="POST" autocomplete="on"
+            novalidate enctype="multipart/form-data" target="_blank">
+
+            <label for="text-input">Text Input:</label>
+            <input type="text" id="text-input" name="text-input" autofocus
+                required minlength="3" maxlength="50" size="30"
+                placeholder="Enter text"><br>
+
+            <label for="email-input">Email Input:</label>
+            <input type="email" id="email-input" name="email-input" multiple
+                required><br>
+
+            <label for="password-input">Password Input:</label>
+            <input type="password" id="password-input" name="password-input"
+                required minlength="8"><br>
+
+            <label for="submit-button">Submit Button:</label>
+            <input type="submit" id="submit-button" value="Submit"><br>
+
+        </form>
+    </body>
+</html>
+
+

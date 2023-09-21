@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML form elements</title>
+    </head>
+    <body>
+        <h1>HTML Form Elements</h1>
+        <form action="/" method="get"
+            oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+            <fieldset>
+                <legend>Bio Data:</legend><br>
+                <label for="name">your name</label><br>
+                <input type="text" name="name"><br>
+                <select name="city" id="city" size="3" multiple>
+                    <option value="rajkot" selected>rajkot</option>
+                    <option value="surat">surat</option>
+                    <option value="ahemdabad">ahemdabad</option>
+                    <option value="vadodara">vadodara</option>
+                </select><br>
+                <textarea name="addr" id="addr" placeholder="address" cols="30"
+                    rows="10"></textarea><br>
+                <input list="branch"><br>
+                <datalist id="branch">
+                    <option value="ECE">ECE</option>
+                    <option value="CSE">ESE</option>
+                </datalist><br>
+            </fieldset>
+            0
+            <input type="range" id="a" name="a" value="50">
+            100 +
+            <input type="number" id="b" name="b" value="50">
+            =
+            <output name="x" for="a b"></output>
+            <br><br>
+            <button type="submit">submit</button>
+        </form>
+    </body>
+</html>
+
+
+

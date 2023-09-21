@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Canvas Basics</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="400" height="200"></canvas>
+
+    <script>
+        // Get the canvas element and its drawing context
+        var canvas = document.getElementById('myCanvas');
+        var ctx = canvas.getContext('2d');
+
+        // Set the fill color and draw a rectangle
+        ctx.fillStyle = 'red';
+        ctx.fillRect(50, 50, 200, 100);
+
+        // Set the stroke color and draw a line
+        ctx.strokeStyle = 'blue';
+        ctx.lineWidth = 5;
+        ctx.beginPath();
+        ctx.moveTo(100, 150);
+        ctx.lineTo(300, 150);
+        ctx.stroke();
+
+        // Set the text properties and draw text
+        ctx.font = '20px Arial';
+        ctx.fillStyle = 'green';
+        ctx.fillText('Hello, Canvas!', 100, 100);
+    </script>
+</body>
+</html>

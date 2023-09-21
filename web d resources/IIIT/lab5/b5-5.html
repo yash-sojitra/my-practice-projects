@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Input Element Attributes</title>
+</head>
+<body>
+  <form action="submit-form.php" method="POST">
+    <label for="text-input">Text Input:</label>
+    <input type="text" id="text-input" name="text-input" maxlength="50" size="30" autocomplete="off" autofocus><br>
+
+    <label for="email-input">Email Input:</label>
+    <input type="email" id="email-input" name="email-input" multiple><br>
+
+    <label for="password-input">Password Input:</label>
+    <input type="password" id="password-input" name="password-input" maxlength="20" size="15"><br>
+
+    <label for="number-input">Number Input:</label>
+    <input type="number" id="number-input" name="number-input" min="0" max="100" step="5"><br>
+
+    <label for="date-input">Date Input:</label>
+    <input type="date" id="date-input" name="date-input" min="2023-01-01" max="2023-12-31"><br>
+
+    <label for="checkbox">Checkbox:</label>
+    <input type="checkbox" id="checkbox" name="checkbox" checked><br>
+
+    <label for="radio1">Radio Button 1:</label>
+    <input type="radio" id="radio1" name="radio-group" value="option1" checked><br>
+
+    <label for="radio2">Radio Button 2:</label>
+    <input type="radio" id="radio2" name="radio-group" value="option2"><br>
+
+    <label for="file-input">File Input:</label>
+    <input type="file" id="file-input" name="file-input" accept=".pdf,.docx"><br>
+
+    <label for="range-input">Range Input:</label>
+    <input type="range" id="range-input" name="range-input" min="0" max="100" step="10"><br>
+
+    <label for="color-input">Color Input:</label>
+    <input type="color" id="color-input" name="color-input" value="#ff0000"><br>
+
+    <label for="time-input">Time Input:</label>
+    <input type="time" id="time-input" name="time-input"><br>
+
+    <label for="week-input">Week Input:</label>
+    <input type="week" id="week-input" name="week-input"><br>
+
+    <label for="month-input">Month Input:</label>
+    <input type="month" id="month-input" name="month-input"><br>
+
+    <label for="search-input">Search Input:</label>
+    <input type="search" id="search-input" name="search-input" results="5"><br>
+
+    <label for="tel-input">Telephone Input:</label>
+    <input type="tel" id="tel-input" name="tel-input" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><br>
+
+    <label for="url-input">URL Input:</label>
+    <input type="url" id="url-input" name="url-input"><br>
+
+    <label for="image-input">Image Input:</label>
+    <input type="image" id="image-input" src="path/to/image.jpg" alt="Submit"><br>
+
+    <label for="hidden-input">Hidden Input:</label>
+    <input type="hidden" id="hidden-input" name="hidden-input" value="Hidden Value"><br>
+
+    <label for="submit-button">Submit Button:</label>
+    <input type="submit" id="submit-button" value="Submit"><br>
+  </form>
+</body>
+</html>

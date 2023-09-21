@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel. | Bookings</title>
+    <style>
+
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+            align-items: center;
+        }
+        #logo{
+            font-size: 2rem;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+        ul{
+            display: flex;
+            list-style: none;
+            align-items: center;
+        }
+        li{
+            margin: 0 2rem;
+        }
+        a{
+            
+            text-decoration: none;
+            color: black;
+        }
+        .btn{
+            background-color: black;
+            padding: 0.7rem 0.7rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+        }
+        .btn a{
+            color: white;
+        }
+
+        #destinations{
+            margin-top: 2rem;
+            padding: 0 2rem;
+        }
+        .cards{
+            display: flex;
+            justify-content: center;
+        }
+        .card{
+            margin: 2rem;
+            padding: 1rem;
+            background-color: rgb(230, 230, 230);
+            border-radius: 10px;
+        }
+        .card .btn{
+            width: fit-content;
+        }
+        h1, h2{
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        h1{
+            font-size: 3rem;
+        }
+        .img img{
+            width: 25vw;
+            border-radius: 6px;
+        }
+        h2{
+            padding: 0.5rem 0;
+            font-size: 2rem;
+        }
+        p{
+            padding-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav>
+        <div id="logo"><a href="./index.html">Travel.</a></div>
+        <div class="links">
+            <ul>
+                <li><a href="./">Home</a></li>
+                <li class="btn"><a href="./booking.html">Book Now</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="destinations">
+        <div class="heading">
+            <h1>Our Popular Destinations</h1>
+        </div>
+        <div class="cards">
+            <div class="card">
+                <div class="img">
+                    <img src="./images/paris.jpg" alt="">
+                </div>
+                <h2>Paris</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, deserunt!</p>
+                <div class="btn"><a href="./booking.html">Book Now</a></div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="./images/china.jpg" alt="">
+                </div>
+                <h2>China</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, deserunt!</p>
+                <div class="btn"><a href="./booking.html">Book Now</a></div>
+            </div>
+            <div class="card">
+                <div class="img">
+                    <img src="./images/italy.jpg" alt="">
+                </div>
+                <h2>Italy</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, deserunt!</p>
+                <div class="btn"><a href="./booking.html">Book Now</a></div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

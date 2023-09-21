@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>SVG Examples</title>
+</head>
+<body>
+  <h1>SVG Examples</h1>
+  
+  <h2>Basic Shapes</h2>
+  <svg width="200" height="200">
+    <rect x="50" y="50" width="100" height="100" fill="red" />
+    <circle cx="150" cy="150" r="50" fill="blue" />
+    <ellipse cx="100" cy="100" rx="50" ry="30" fill="green" />
+    <line x1="50" y1="150" x2="150" y2="50" stroke="orange" stroke-width="3" />
+  </svg>
+  
+  <h2>Paths</h2>
+  <svg width="200" height="200">
+    <path d="M50 50 L150 50 L100 150 Z" fill="yellow" />
+    <path d="M50 50 Q100 150 150 50" fill="pink" />
+    <path d="M50 50 C50 150 150 150 150 50" fill="purple" />
+  </svg>
+  
+  <h2>Text</h2>
+  <svg width="200" height="200">
+    <text x="50" y="100" fill="black">Hello SVG!</text>
+  </svg>
+  
+  <h2>Gradient</h2>
+  <svg width="200" height="200">
+    <defs>
+      <lineargradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+        <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+      </lineargradient>
+    </defs>
+    <rect x="50" y="50" width="100" height="100" fill="url(#grad)" />
+  </svg>
+  
+</body>
+</html>

@@ -161,7 +161,7 @@ int maxheight(struct Node* root){
     height_rec(root,level,lvlptr);
     return level - 1;
 }
-int main() { 
+int main() {
     struct Node *root = NULL; 
     int choice, value; 
         printf("\nAVL Tree Operations:\n"); 
